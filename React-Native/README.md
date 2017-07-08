@@ -51,7 +51,7 @@
     - 事件绑定 ****
   - React.JS
   - React 的模块化组件概念
-     - 什么是组件
+     - [什么是组件](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/25)
      - [组件的生命周期](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/8)
      - [组件间的通信](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/13) ****
         - 子组件调用父组件
@@ -65,11 +65,11 @@
 
 4. 基础概念            
 
-4.1 属性（props）   
-> 属性是不可以修改的
+4.1 [属性（props）](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/25)   
+> 属性是不可以在组件内部修改的
 
-4.2 状态（state）
-> 状态是可以修改的
+4.2 [状态（state）](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/24)
+> 状态是可以在组件内部修改的
 
 4.3 样式（style） 
 - FlexBox 布局
@@ -189,7 +189,7 @@
 
 9.2 [React Native 编码规范](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/6)       
 
-9.3 颜色       
+9.3 [颜色](http://reactnative.cn/docs/0.45/colors.html#content)       
  
 
 ## 问题
