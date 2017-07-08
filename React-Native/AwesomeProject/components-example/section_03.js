@@ -31,7 +31,6 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.pushNewRoute = this.pushNewRoute.bind(this); // https://github.com/facebook/react-native/issues/1110
-    this.state = {};
   }
 
   render() {

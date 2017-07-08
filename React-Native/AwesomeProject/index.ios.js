@@ -39,6 +39,8 @@ import TimerApp from './api-example/section_05.js';
 import Talks from './other/section_01.js';
 import NativeAPIModulesDemo from './other/section_02.js';
 import NativeUIComponentsDemo from './other/section_03.js';
+import MenuListApp from './other/section_05.js';
+import CalendarApp from './other/section_06.js';
 
 // 主程序
 export default class AwesomeProject extends Component {
@@ -235,6 +237,22 @@ class List extends Component {
         alert('查看下一课')
       }
     },
+    {
+     component: MenuListApp,
+     title: '05 组件的封装之二级联动菜单',
+     rightButtonTitle: 'Next',
+     onRightButtonPress: function() {
+       alert('查看下一课')
+     }
+   },
+   {
+    component: CalendarApp,
+    title: '06 组件的封装之日历',
+    rightButtonTitle: 'Next',
+    onRightButtonPress: function() {
+      alert('查看下一课')
+    }
+  },
     ],
     ];
 
