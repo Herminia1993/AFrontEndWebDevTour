@@ -29,8 +29,8 @@ var rawData = {"全部区域": {
 },
 "地铁沿线": {
   "地铁全线": ["地铁全线"],
-  "一号线": ["莘庄站", "外环路站", "莲花路站"],
-  "二号线": ["浦东国际机场站", "海天三路站", "远东大道站"],
+  "1号线": ["莘庄站", "外环路站", "莲花路站"],
+  "2号线": ["浦东国际机场站", "海天三路站", "远东大道站"],
 },
 };
 
@@ -43,14 +43,14 @@ var defaultBackgroundColor = {backgroundColor: '#add8e6'}; // 默认情况下左
 // 二级联动菜单
 export default class CalendarApp extends Component {
 
-  _didSelectedItem(val) {
-    alert(val);
+  _didSelectedItem(itemName) {
+    alert(itemName);
   }
 
   render() {
     return (
       <View style={{marginTop: 64, flex: 1}}>
-        <MenuList data={rawData} tabSelected={0} nSelected={1} didSelectedItem={this._didSelectWholeAreaSection}/>
+        <MenuList data={rawData} tabSelected={0} nSelected={1} didSelectedItem={this._didSelectedItem}/>
       </View>
     );
   }
@@ -60,6 +60,8 @@ export default class CalendarApp extends Component {
 
 class MenuList extends Component {
 
+  // 如何在 constructor 中访问 props
+  // this.props is not available in Component constuctor https://github.com/facebook/react/issues/3599
   constructor(props) {
     super(props);
 
@@ -69,13 +71,15 @@ class MenuList extends Component {
 
     var obj = {};
     var tabIndex = 0;
+    // JavaScript 中的 for 循环 http://www.w3school.com.cn/js/js_objects.asp
+    // for...in 循环中的代码块将针对每个属性执行一次。
     for (var tab in data) {
       var childData = data[tab];
       var sectionIndex = 0;
 
       for (var section in childData) {
-        var type = prefixType + tab + '_' + section;
-        var style = prefixStyle + tab + '_' + section;
+        var type = prefixType + tabIndex + '_' + sectionIndex;
+        var style = prefixStyle + tabIndex + '_' + sectionIndex;
         obj[type] = false;
         obj[style] = {};
 
@@ -92,50 +96,118 @@ class MenuList extends Component {
       tabIndex++;
     }
 
-    obj.tabSelected = tabSelected;
-    obj.nSelected = nSelected;
-
     this.state = {
+      selectedTabIndex: tabSelected,
       dataSource: obj,
+      selectedSectionIndex: nSelected,
     };
   }
 
-  _didSelectTab() {
+  _didSelectTab(tabIdx, tabName) {
+    var data = this.props.data;
+    var tabSelected = tabIdx; // 头部选中的 index
+    var nSelected = 0; // 左侧选择的 index
 
-  }
+    var obj = {};
+    var tabIndex = 0;
+    for (var tab in data) {
+      var childData = data[tab];
+      var sectionIndex = 0;
 
-  _didSelectSection(val) {
+      for (var section in childData) {
+        var type = prefixType + tabIndex + '_' + sectionIndex;
+        var style = prefixStyle + tabIndex + '_' + sectionIndex;
+        obj[type] = false;
+        obj[style] = {};
+
+        // 设置默认选中项
+        if (tabSelected === tabIndex &&
+          nSelected === sectionIndex) {
+          obj[type] = true;
+          obj[style] = defaultBackgroundColor;
+        }
+
+        sectionIndex++;
+      }
+
+      tabIndex++;
+    }
 
     this.setState(
       {
-
+        selectedTabIndex: tabSelected,
+        dataSource: obj,
+        selectedSectionIndex: nSelected,
       }
     );
   }
 
-  _didSelectItem(val) {
+  _didSelectSection(sectionIndex, sectionName) {
 
+    var data = this.props.data;
+    var tabSelected = this.state.selectedTabIndex; // 头部选中的 index
+    var nSelected = sectionIndex; // 左侧选择的 index
 
+    var obj = {};
+    var tabIndex = 0;
+    for (var tab in data) {
+      var childData = data[tab];
+      var sectionIndex = 0;
+
+      for (var section in childData) {
+        var type = prefixType + tabIndex + '_' + sectionIndex;
+        var style = prefixStyle + tabIndex + '_' + sectionIndex;
+        obj[type] = false;
+        obj[style] = {};
+
+        // 设置默认选中项
+        if (tabSelected === tabIndex &&
+          nSelected === sectionIndex) {
+          obj[type] = true;
+          obj[style] = defaultBackgroundColor;
+        }
+
+        sectionIndex++;
+      }
+
+      tabIndex++;
+    }
+
+    this.setState(
+      {
+        selectedTabIndex: tabSelected,
+        dataSource: obj,
+        selectedSectionIndex: nSelected,
+      }
+    );
+  }
+
+  _didSelectItem(itemName) {
+    // 这里用到了 this，所以在调用该函数时需要绑定 this
+    this.props.didSelectedItem(itemName);
   }
 
   render() {
       return (
         <View style={styles.container}>
-          <Header data={this.props.data}
+          <Header
+            data={this.props.data}
             dataSource={this.state.dataSource}
-            tabSelected={this.props.tabSelected}
-            didSelectTab={this._didSelectTab}/>
+            tabSelected={this.state.selectedTabIndex}
+            didSelectTab={this._didSelectTab.bind(this)}/>
           <View style={[styles.flex_row, styles.flex_1]}>
-            <LeftPannel data={this.props.data}
+            <LeftPannel
+              data={this.props.data}
               dataSource={this.state.dataSource}
-              tabSelected={this.props.tabSelected}
-              didSelectRow={this._didSelectSection}/>
+              tabSelected={this.state.selectedTabIndex}
+              didSelectRow={this._didSelectSection.bind(this)}/>
 
-            <RightPannel data={this.props.data}
+            <RightPannel
+              data={this.props.data}
               dataSource={this.state.dataSource}
-              tabSelected={this.props.tabSelected}
-              nSelected={this.props.nSelected}
-              didSelectRow={this._didSelectItem}/>
+              tabSelected={this.state.selectedTabIndex}
+              nSelected={this.state.selectedSectionIndex}
+              didSelectRow={this._didSelectItem.bind(this)}/>
 
           </View>
         </View>
@@ -145,7 +217,7 @@ class MenuList extends Component {
 
 // 头部
 class Header extends Component {
-
+  // Typechecking With PropTypes https://facebook.github.io/react/docs/typechecking-with-proptypes.html
   static propTypes = {
     data: PropTypes.object,
     didSelectTab: PropTypes.func,
@@ -158,7 +230,7 @@ class Header extends Component {
     var header = [];
     var tabIndex = 0;
 
-    for (var tab in data) {
+    for (var tabName in data) {
       var tabStyle = null;
 
       if (tabIndex === tabSelected) {
@@ -171,8 +243,8 @@ class Header extends Component {
         <TouchableOpacity
           key={tabIndex}
           style={[styles.flex_1, styles.flex_center]}
-          onPress={this.props.didSelectTab.bind(this, tab)}>
-          <Text style={tabStyle}>{tab}</Text>
+          onPress={this.props.didSelectTab.bind(this, tabIndex, tabName)}>
+          <Text style={tabStyle}>{tabName}</Text>
         </TouchableOpacity>
       );
 
@@ -208,19 +280,20 @@ class LeftPannel extends Component {
     var leftPannelItems = [];
     var tabIndex = 0;
 
-    for (var tab in data) {
-      if (tabIndex === tabSelected) {
+    for (var tabName in data) {
+
+      if (tabIndex === tabSelected) { // 当前选中的 tab
 
         var sectionIndex = 0;
-        for (var section in data[tab]) {
+        for (var sectionName in data[tabName]) {
 
-          var style =this.props.dataSource[prefixStyle + tabIndex + '_' + sectionIndex];
+          var style = this.props.dataSource[prefixStyle + tabIndex + '_' + sectionIndex];
           var anItem = (
             <Text
               key={sectionIndex}
-              onPress={this.props.didSelectRow.bind(this, tab, section)}
+              onPress={this.props.didSelectRow.bind(this, sectionIndex, sectionName)}
               style={[styles.list_item, style]}>
-              {section}
+              {sectionName}
             </Text>
           );
           leftPannelItems.push(anItem);
@@ -260,20 +333,20 @@ class RightPannel extends Component {
 
     var itemList = [];
     var tabIndex = 0;
-    for (var tab in data) {
-        if (tabSelected === tabIndex) {
+    for (var tabName in data) {
+        if (tabSelected === tabIndex) { // 当前选中的 tab
           var sectionIndex = 0;
-          for (var section in data[tab]) {
-            if (this.props.dataSource[prefixType + tabIndex + '_' + sectionIndex]) {
-              for (var item in data[tab][section]) {
-                var itemIndex = 0;
+          for (var section in data[tabName]) {
+            if (this.props.dataSource[prefixType + tabIndex + '_' + sectionIndex]) { // 当前选中的左侧
+              var itemIndex = 0;
+              for (var item in data[tabName][section]) {
                 var anItemElement = (
                     <Text
                       key={itemIndex}
                       numberOfLines={1}
-                      onPress={this.props.didSelectRow.bind(this, data[tab][section][item])}
+                      onPress={this.props.didSelectRow.bind(this, data[tabName][section][item])}
                       style={[styles.list_item]}>
-                      {data[tab][section][item]}
+                      {data[tabName][section][item]}
                      </Text>
                 );
                 itemList.push(anItemElement);

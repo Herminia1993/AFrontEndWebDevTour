@@ -13,7 +13,7 @@ import {
 export default class MenuListApp extends Component {
   render() {
     return (
-      <View style={{marginTop: 100, flex: 1}}>
+      <View style={{marginTop: 64, flex: 1}}>
         <MenuList/>
       </View>
     );
