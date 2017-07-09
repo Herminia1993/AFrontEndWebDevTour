@@ -24,14 +24,57 @@ export default class MenuListApp extends Component {
 class MenuList extends Component {
   constructor() {
     super();
+
     this.state = {
-      wholeArea: false,
-      hotBusiness: false,
-      hotDistrict: false,
+      isWholeAreaSelected: false,
+      isHotBusinessSelected: true,
+      isHotDistrictSelected: false,
       wholeAreaFFF: {},
-      hotBusinessFFF: {backgroundColor: '#f6f6f6'},
+      hotBusinessFFF: {backgroundColor: '#add8e6'},
       hotDistrictFFF: {},
     };
+
+    // this._didSelectWholeAreaSection = this._didSelectWholeAreaSection.bind(this);
+  }
+
+  _didSelectWholeAreaSection() {
+
+    this.setState(
+      {
+        isWholeAreaSelected: true,
+        isHotBusinessSelected: false,
+        isHotDistrictSelected: false,
+        wholeAreaFFF: {backgroundColor: '#add8e6'},
+        hotBusinessFFF: {},
+        hotDistrictFFF: {},
+      }
+    );
+  }
+
+  _didSelectHotBusinessSection() {
+    this.setState(
+      {
+        isWholeAreaSelected: false,
+        isHotBusinessSelected: true,
+        isHotDistrictSelected: false,
+        wholeAreaFFF: {},
+        hotBusinessFFF: {backgroundColor: '#add8e6'},
+        hotDistrictFFF: {},
+      }
+    );
+  }
+
+  _didSelectHotDistrictSection() {
+    this.setState(
+      {
+        isWholeAreaSelected: false,
+        isHotBusinessSelected: false,
+        isHotDistrictSelected: true,
+        wholeAreaFFF: {},
+        hotBusinessFFF: {},
+        hotDistrictFFF: {backgroundColor: '#add8e6'},
+      }
+    );
   }
 
   render() {
@@ -39,17 +82,31 @@ class MenuList extends Component {
         <View style={styles.container}>
           <Header/>
           <View style={[styles.flex_row, styles.flex_1]}>
-            <ScrollView style={[styles.flex_1, styles.left_pannel]}>
-              <Text style={[styles.left_row, this.state.wholeAreaFFF]}>
-                全部区域
-              </Text>
-              <Text style={[styles.left_row, this.state.hotBusinessFFF]}>
-                热门商圈
-              </Text>
-              <Text style={[styles.left_row, this.state.hotDistrictFFF]}>
-                热门行政区
-              </Text>
-            </ScrollView>
+            <LeftPannel
+              wholeAreaFFF={this.state.wholeAreaFFF}
+              hotBusinessFFF={this.state.hotBusinessFFF}
+              hotDistrictFFF={this.state.hotDistrictFFF}
+              didSelectWholeAreaSection={this._didSelectWholeAreaSection.bind(this)}
+              didSelectHotBusinessSection={this._didSelectHotBusinessSection.bind(this)}
+              didSelectHotDistrictSection={this._didSelectHotDistrictSection.bind(this)}
+              />
+
+            {
+            this.state.isWholeAreaSelected
+                ? <RightPannel itemTitles={['全部区域']}/>
+                : null
+            }
+            {
+            this.state.isHotBusinessSelected
+                ? <RightPannel itemTitles={['虹桥地区', '徐家汇地区', '淮海路商业区', '静安寺地区']}/>
+                : null
+            }
+            {
+            this.state.isHotDistrictSelected
+                ? <RightPannel itemTitles={['静安区', '徐汇区', '黄浦区', '虹口区']}/>
+                : null
+            }
+
           </View>
         </View>
   );
@@ -68,6 +125,61 @@ class Header extends Component {
           <Text style={styles.header_text}>地铁沿线</Text>
         </View>
       </View>
+    );
+  }
+
+}
+
+// 左侧的列表
+class LeftPannel extends Component {
+
+  render() {
+    return (
+      <ScrollView
+        style={[styles.flex_1, styles.left_pannel]}>
+        <Text
+          style={[styles.list_item, this.props.wholeAreaFFF]}
+          onPress={this.props.didSelectWholeAreaSection}>
+          全部区域
+        </Text>
+        <Text
+          style={[styles.list_item, this.props.hotBusinessFFF]}
+          onPress={this.props.didSelectHotBusinessSection}>
+          热门商圈
+        </Text>
+        <Text
+          style={[styles.list_item, this.props.hotDistrictFFF]}
+          onPress={this.props.didSelectHotDistrictSection}>
+          热门行政区
+        </Text>
+      </ScrollView>
+    );
+  }
+}
+
+// 右侧的列表
+class RightPannel extends Component {
+
+
+  render() {
+    var itemList = [];
+    for (var i in this.props.itemTitles) {
+      // 遍历时必须要添加 key 属性
+        var anItemElement = (
+            <Text
+              key={i}
+              numberOfLines={1}
+              style={[styles.list_item]}>
+              {this.props.itemTitles[i]}
+             </Text>
+        );
+        itemList.push(anItemElement);
+    }
+
+    return (
+      <ScrollView style={[styles.flex_1, styles.right_pannel]}>
+        {itemList}
+      </ScrollView>
     );
   }
 
@@ -118,15 +230,17 @@ class Header extends Component {
    },
 
    // 左侧面板
-   left_pannel_bgcolor: {
+   left_pannel: {
      backgroundColor: '#F2F2F2',
+
    },
 
-   left_row: {
+   list_item: {
      height: 30,
-     lineHeight: 20,
+     lineHeight: 30,
      fontSize: 14,
      color: '#7C7C7C',
+     textAlignVertical: 'center',
    },
 
    right_pannel: {

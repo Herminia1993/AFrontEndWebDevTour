@@ -19,7 +19,7 @@ export default class TextInputApp extends Component {
     this.state = {
       value: '',
       show: false,
-  };
+    };
     this.textDidChange = this.textDidChange.bind(this); // ES6的变化 https://github.com/goatslacker/alt/issues/283
     this.searchResultSelected = this.searchResultSelected.bind(this);
   }
