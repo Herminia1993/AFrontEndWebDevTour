@@ -252,6 +252,7 @@
 - [原生开发才是王道](http://stormzhang.com/2016/09/05/native-app-is-king/)
 - [React Native概述：背景、规划和风险](http://div.io/topic/938)
 - [鬼道：Native与Web的融合 - Qcon中React-Native演讲](http://www.infoq.com/cn/presentations/the-fusion-of-native-and-web)
+- [携程：React Native 业务实践和性能优化](http://www.infoq.com/cn/presentations/react-native-business-practice-and-performance-optimization?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
 - [bang：React Native通信机制详解](http://blog.cnbang.net/tech/2698/)
 - [iOS 动态更新方案对比:JSPatch vs React Native](https://blog.cnbang.net/tech/3237/)
 - [React Native 在 Glow 的实践](http://tech.glowing.com/cn/react-native-at-glow/)
