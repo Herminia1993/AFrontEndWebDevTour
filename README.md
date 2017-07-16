@@ -10,6 +10,7 @@ A journey of learning front-end development.
 - [w3school](http://www.w3school.com.cn)
 - [廖雪峰的 JavaScript 教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 - [关于 JavaScript 的好书有哪些？](https://www.zhihu.com/question/19562698)
+- [如果有人让你推荐前端技术书，请让他看这个列表：jobbole/awesome-web-dev-books](https://github.com/jobbole/awesome-web-dev-books)
 
 
 ## 知识点
