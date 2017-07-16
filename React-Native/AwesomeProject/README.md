@@ -5,9 +5,9 @@
 
 ## Preview
 
-![](./preview/01.png)
-![](./preview/02.png)
-![](./preview/03.png)
-![](./preview/04.png)
-![](./preview/05.png)
-![](./preview/06.png)
+<img src="./preview/01.png" width=375 height=667/>
+<img src="./preview/02.png" width=375 height=667/>
+<img src="./preview/03.png" width=375 height=667/>
+<img src="./preview/04.png" width=375 height=667/>
+<img src="./preview/05.png" width=375 height=667/>
+<img src="./preview/06.png" width=375 height=667/>
