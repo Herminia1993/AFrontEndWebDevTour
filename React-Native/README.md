@@ -22,7 +22,7 @@
 
 1.6 如何客观看待 React Native 技术？           
 
-2.环境搭建            
+2.[环境搭建](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/27)            
 
 - [开发工具及插件](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/14)
   - Homebrew
