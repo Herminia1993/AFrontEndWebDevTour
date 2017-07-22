@@ -27,11 +27,12 @@
 - [开发工具及插件](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/14)
   - Homebrew
   - Node
-  - Yarn
-  - Xcode
+  - React Native CLI
+  - Watchman
   - Atom 及配套插件
   - Nuclide
-  - Watchman
+  - Xcode
+  - Yarn
 
 - 创建项目
 
@@ -165,7 +166,7 @@
           
 6.6 [原生和 React Native 之间的通信](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/22)        
 
-6.7 Flux 数据流简介，redux 框架简介
+6.7 Flux 数据流简介，Redux 框架简介
 
 7.工程实践            
 
