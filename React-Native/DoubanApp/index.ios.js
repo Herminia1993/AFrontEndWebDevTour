@@ -12,6 +12,23 @@ import {
   View
 } from 'react-native';
 
+
+/*
+主要功能模块划分：
+- 豆瓣
+  - 图书
+    - 搜索
+    - 列表
+    - 详情
+  - 电影
+    - 搜索
+    - 列表
+    - webView 中打开详情页
+  - 音乐
+    - 搜索
+    - 列表
+    - webView 中打开详情页
+ */
 export default class DoubanApp extends Component {
   render() {
     return (
