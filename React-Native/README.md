@@ -89,7 +89,7 @@
 
 二、API 和组件            
 
-4. 常用组件            
+4. [常用组件](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/28)            
 
 4.1 View     
 
@@ -114,10 +114,12 @@
 
 4.9 NavigatorIOS     
 
-4.10 TabBarIOS       
+4.10 TabBarIOS  
+
+4.11 StatusBar  
                    
 
-5. 常用 API            
+5. [常用 API](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/28)            
 
 5.1 应用入口 AppRegistry   
 
@@ -126,29 +128,27 @@
 5.3 屏幕参数 PixelRatio    
 
 5.4 应用状态 AppStateIOS    
-
-5.5 状态栏 StatusBarIOS      
-
-5.6 AlertIOS      
+      
+5.5 AlertIOS      
          
-5.7 ActionSheetIOS       
+5.6 ActionSheetIOS       
 
-5.8 网络状态 NetInfo          
+5.7 网络状态 NetInfo          
         
-5.9 相机访问 CameraRoll         
+5.8 相机访问 CameraRoll         
          
-5.10 震动 VibrationIOS          
+5.9 震动 VibrationIOS          
         
-5.11 地理位置信息 Geolocation        
+5.10 地理位置信息 Geolocation        
           
-5.12 网络请求            
+5.11 网络请求            
   - Fetch
   - XMLHttpRequest（Ajax）
   - WebSocket      
 
-5.13 定时器            
+5.12 定时器            
       
-5.14 动画             
+5.13 动画             
 
 三、进阶指南            
 
