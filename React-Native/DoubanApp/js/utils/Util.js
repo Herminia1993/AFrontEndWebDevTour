@@ -1,4 +1,9 @@
+/**
+ * 工具类
+ */
+
 'use strict';
+
 
 var React = require('react-native');
 var Dimensions = require('Dimensions');
@@ -44,7 +49,9 @@ module.exports = {
    * 用于等待加载时显示的 loading 组件
    * @type {Component}
    */
-  loading: <ActivityIndicatorIOS color="#3EOOFF"
-  style={marginTop: 40, marginLeft: Dimensions.get('window').width/2-10}>
+  loading: <ActivityIndicatorIOS
+  color="#3EOOFF"
+  style={{marginTop: 40, marginLeft: Dimensions.get('window').width/2-10}}
+  />
 
-},
+}

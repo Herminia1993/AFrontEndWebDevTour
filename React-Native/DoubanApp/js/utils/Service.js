@@ -1,4 +1,8 @@
+/**
+ * API 接口信息类
+ */
 
+'use strict';
 
 module.exports = {
   bookSearch: 'https://api.douban.com/v2/book/search',  // 图书搜索
