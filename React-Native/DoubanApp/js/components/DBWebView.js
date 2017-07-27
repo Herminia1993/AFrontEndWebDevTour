@@ -35,7 +35,7 @@ export default class DBWebView extends Component {
          contentInset={{top: 40}}
          startInLoadingState={true}
          style={{width: Util.screenSize.width, height: Util.screenSize.height-50}}
-         url={this.props.url}
+         source={{uri: this.props.url}}
         >
         </WebView>
       </View>

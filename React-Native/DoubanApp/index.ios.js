@@ -36,9 +36,9 @@ import {
 import BookList from './js/pages/book/BookList.js';
 import Music from './js/pages/music/Music.js';
 import Movie from './js/pages/movie/Movie.js';
-import DBWebView from './js/components/WebView.js';
+// import DBWebView from './js/components/DBWebView.js';
 
-StatusBar.setHidden(true);
+// StatusBar.setHidden(true);
 export default class DoubanApp extends Component {
 
   constructor(props) {
@@ -52,10 +52,10 @@ export default class DoubanApp extends Component {
   render() {
     return (
 
-      <TabBarIOS>
+      <TabBarIOS unselectedTintColor='gray' tintColor='#111111'>
         <TabBarIOS.Item
         title='图书'
-        systemIcon='bookmarks'
+        icon={require('./resources/img/tab_bar_icon/book.png')}
         selected={this.state.selectedTab === 'book'}
         onPress={
           () => {
@@ -67,7 +67,7 @@ export default class DoubanApp extends Component {
           <NavigatorIOS
             style={{flex: 1}}
             initialRoute={{
-              component: DBWebView,
+              component: BookList,
               title: '图书',
               passProps: {},
             }}
@@ -77,7 +77,7 @@ export default class DoubanApp extends Component {
 
         <TabBarIOS.Item
         title='电影'
-        systemIcon='history'
+        icon={require('./resources/img/tab_bar_icon/movie.png')}
         selected={this.state.selectedTab === 'movie'}
         onPress={
           () => {
@@ -91,7 +91,7 @@ export default class DoubanApp extends Component {
 
         <TabBarIOS.Item
         title='音乐'
-        systemIcon='featured'
+        icon={require('./resources/img/tab_bar_icon/music.png')}
         selected={this.state.selectedTab === 'music'}
         onPress={
           () => {
