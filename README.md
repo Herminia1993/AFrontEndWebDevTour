@@ -8,6 +8,7 @@ A journey of learning front-end development.
 - [Front-End Web Development(The Big Nerd Ranch Guide)](https://www.amazon.com/Front-End-Web-Development-Ranch-Guides/dp/0134433947)
 - [MDN](https://developer.mozilla.org/zh-CN/)
 - [w3school](http://www.w3school.com.cn)
+- [阮一峰：ECMAScript 6 入门教程](http://es6.ruanyifeng.com/)
 - [廖雪峰的 JavaScript 教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 - [关于 JavaScript 的好书有哪些？](https://www.zhihu.com/question/19562698)
 - [如果有人让你推荐前端技术书，请让他看这个列表：jobbole/awesome-web-dev-books](https://github.com/jobbole/awesome-web-dev-books)
