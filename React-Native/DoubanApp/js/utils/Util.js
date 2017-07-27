@@ -4,18 +4,14 @@
 
 'use strict';
 
+import React, { Component } from 'react';
+import {
+   PixelRatio,
+   ActivityIndicator,
+} from 'react-native';
+import Dimensions from 'Dimensions';
 
-var React = require('react-native');
-var Dimensions = require('Dimensions');
-
-
-var {
-  PixelRatio,
-  ActivityIndicatorIOS,
-} = React;
-
-
-module.exports = {
+const Util = {
   onePixel: 1 / PixelRatio.get(), // 一像素
   screenSize: {
     width: Dimensions.get('window').width,  // 屏幕宽度
@@ -49,9 +45,13 @@ module.exports = {
    * 用于等待加载时显示的 loading 组件
    * @type {Component}
    */
-  // loading: <ActivityIndicatorIOS
-  // color="#3EOOFF"
-  // style={{marginTop: 40, marginLeft: Dimensions.get('window').width/2-10}}
-  // />,
+  loading: <ActivityIndicator
+  animating={true}
+  size='large'
+  style={{marginTop: 200}}
+  />,
 
 }
+
+
+export default Util;
