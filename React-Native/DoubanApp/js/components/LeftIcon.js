@@ -4,16 +4,16 @@
 
 'use strict';
 
-var React = require('react-native');
-var Util = require('../utils/Util.js');
-
-var {
+import React, { Component } from 'react';
+import {
   StyleSheet,
   Text,
   View,
-} = React;
+} from 'react-native';
 
-module.exports = React.creaeClass({
+import Util from '../utils/Util.js';
+
+export default class LeftIcon extends Component {
     render() {
       return (
         <View>
@@ -21,7 +21,7 @@ module.exports = React.creaeClass({
         </View>
       );
     }
-});
+}
 
 
 var styles = StyleSheet.create({

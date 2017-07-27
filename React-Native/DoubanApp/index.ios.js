@@ -67,7 +67,7 @@ export default class DoubanApp extends Component {
           <NavigatorIOS
             style={{flex: 1}}
             initialRoute={{
-              component: WebView,
+              component: DBWebView,
               title: '图书',
               passProps: {},
             }}

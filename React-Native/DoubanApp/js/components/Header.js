@@ -16,8 +16,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-var Icon = require('./LeftIcon.js');
-var Util = require('../utils/Util.js');
+
+import LeftIcon from './LeftIcon.js';
+import Util from '../utils/Util.js';
 
 export default class Header extends Component {
 
@@ -27,7 +28,7 @@ export default class Header extends Component {
           <View style={[styles.header, styles.row, styles.center]}>
           {/*返回按钮*/}
             <TouchableOpacity style={[styles.row, styles.center]} onPress={this._pop}>
-              <Icon/>
+              <LeftIcon/>
               <Text style={styles.fontFFF}>{obj.backName}</Text>
             </TouchableOpacity>
             {/*标题*/}
