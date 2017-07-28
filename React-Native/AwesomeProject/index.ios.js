@@ -29,6 +29,7 @@ import WebViewApp from './components-example/section_08.js';
 import SimpleListViewApp from './components-example/section_09.js';
 import GridLayoutListViewApp from './components-example/section_10.js';
 import ScrollViewApp from './components-example/section_11.js';
+import ActivityIndicatorApp from './components-example/section_12.js';
 
 import AsyncStorageApp from './api-example/section_01.js';
 import AlertIOSApp from './api-example/section_02.js';
@@ -165,6 +166,14 @@ class List extends Component {
        {
         component: ScrollViewApp,
         title: '11 ScrollView 组件',
+        rightButtonTitle: 'Next',
+        onRightButtonPress: function() {
+          alert('查看下一课')
+        }
+      },
+       {
+        component: ActivityIndicatorApp,
+        title: '12 ActivityIndicator 组件',
         rightButtonTitle: 'Next',
         onRightButtonPress: function() {
           alert('查看下一课')
