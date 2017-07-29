@@ -48,7 +48,7 @@ export default class MusicItem extends Component {
             >
             曲目：{this.props.musicData.title}
           </Text>
-          <Text style={{width: 180, textAlign: 'left'}} numberOfLines={1}>
+          <Text style={{width: 150, textAlign: 'left'}} numberOfLines={1}>
             演唱：{this.props.musicData.author[0].name}
           </Text>
         </View>
@@ -60,7 +60,7 @@ export default class MusicItem extends Component {
             >
             评分：{this._stars(this.props.musicData.rating.average)}
           </Text>
-          <Text style={{width: 180, textAlign: 'left'}} numberOfLines={1}>
+          <Text style={{width: 150, textAlign: 'left'}} numberOfLines={1}>
             时间：{this.props.musicData.attrs.pubdate}
           </Text>
         </View>
