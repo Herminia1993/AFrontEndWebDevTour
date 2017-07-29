@@ -19,6 +19,7 @@ import Util from '../../utils/Util.js';
 import Service from '../../utils/Service.js';
 import BookItem from './BookItem.js';
 import SearchBar from '../../components/Search.js'
+import BookDetail from './BookDetail.js';
 
 export default class BookList extends Component {
 
@@ -42,15 +43,19 @@ export default class BookList extends Component {
 
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         {/*搜索工具条*/}
         <View style={[styles.searchBar, styles.flexRow]}>
           {/*输入框*/}
           <View style={styles.flex_1}>
-            <SearchBar placeholder='请输入图书的名称' onChangeText={this._textDidChange}/>
+            <SearchBar
+               value={this.state.keywords}
+               placeholder='请输入图书的名称'
+               clearButtonMode='while-editing'
+                onChangeText={this._textDidChange.bind(this)}/>
           </View>
           {/*搜索按钮*/}
-          <TouchableOpacity style={styles.searchButton} onPress={this._didSelectSearchButton}>
+          <TouchableOpacity style={styles.searchButton} onPress={this._didSelectSearchButton.bind(this)}>
             <Text style={styles.fontFFF}>搜索</Text>
           </TouchableOpacity>
         </View>
@@ -59,37 +64,59 @@ export default class BookList extends Component {
           this.state.showList ?
           <ListView
             dataSource={this.state.dataSource}
-            renderRow={this._renderRow}
+            renderRow={this._renderRow.bind(this)}
             />
           :
           Util.loading
         }
-      </ScrollView>
+      </View>
     );
   }
 
 /* 组件回调 */
 
   _textDidChange(text) {
-
+    this.setState({
+      keywords: text,
+    });
   }
 
   _didSelectSearchButton() {
 
+    if (this.state.keywords.length == 0) {
+      alert('搜索词不能为空！');
+      return;
+    }
+    this._loadData();
   }
 
   _renderRow(rowData) {
     return (
-      <BookItem bookData={rowData}/>
+      <BookItem
+        bookData={rowData}
+        onPress={this._pushBookDetailPage.bind(this, rowData)}
+        />
     );
   }
 
-  _pushBookDetailPage(id) {
+  // 查看详情
+  _pushBookDetailPage(rowData) {
+    var bookDetailRoute = {
+      component: BookDetail,
+      title: rowData.title,
+      passProps: {
+        bookId: rowData.id,
+      }
+    };
 
+    this.props.navigator.push(bookDetailRoute);
   }
 
   /* 自定义方法 */
+
+  // 请求接口数据
   _loadData() {
+
     var dataSource = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
@@ -125,7 +152,7 @@ export default class BookList extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 5,
+    marginTop: 64,
   },
 
   flexRow: {
@@ -137,9 +164,10 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    height: 45,
+    padding: 10,
+    height: 60,
+    borderBottomWidth: Util.onePixel,
+    borderColor: '#ccc',
   },
 
   searchButton: {

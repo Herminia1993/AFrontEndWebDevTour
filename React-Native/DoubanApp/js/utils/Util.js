@@ -31,6 +31,7 @@ const Util = {
     )
     .then(
       (responseText) => {
+        console.log(responseText);
         successCallback(JSON.parse(responseText));
       }
     )

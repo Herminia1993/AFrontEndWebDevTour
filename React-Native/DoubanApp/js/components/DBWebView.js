@@ -14,7 +14,6 @@ import {
 } from 'react-native';
 
 import Util from '../utils/Util.js';
-import Header from './Header.js';
 
 
 export default class DBWebView extends Component {
@@ -22,14 +21,6 @@ export default class DBWebView extends Component {
   render() {
     return (
       <View>
-        {/*头部导航条*/}
-        <Header
-        navigator={this.props.navigator}
-        initObj={{
-          backName: this.props.backName,
-          title: this.props.title,
-        }}
-        />
         {/*Web View*/}
         <WebView
          contentInset={{top: 40}}

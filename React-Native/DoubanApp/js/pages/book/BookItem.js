@@ -4,7 +4,10 @@
 
 'use strict';
 
-import React, { Component } from 'react';
+import React, {
+  Component,
+  PropTypes
+ } from 'react';
 
 import {
   StyleSheet,
@@ -17,6 +20,11 @@ import {
 import Util from '../../utils/Util.js';
 
 export default class BookItem extends Component {
+  // 声明属性的类型
+  static propTypes = {
+    bookData: PropTypes.object.isRequired,
+  };
+
   render() {
     var bookData = this.props.bookData;
     return (
@@ -27,9 +35,22 @@ export default class BookItem extends Component {
         </View>
         {/*右侧的文字*/}
         <View style={styles.textContent}>
-        {/*标题*/}
+          {/*标题*/}
           <View>
-            <Text style={{width: 200}} numberOfLines={1}>{bookData.title}</Text>
+            <Text style={styles.bookTitle} numberOfLines={1}>{bookData.title}</Text>
+          </View>
+          {/*出版社*/}
+          <View style={{marginTop: 10}}>
+            <Text style={styles.bookPublisherAndAuthor} numberOfLines={1}>{bookData.publisher}</Text>
+          </View>
+          {/*作者*/}
+          <View style={{marginTop: 10}}>
+            <Text style={styles.bookPublisherAndAuthor} numberOfLines={1}>{bookData.author}</Text>
+          </View>
+          {/*页数*/}
+          <View style={[styles.flexRow, {marginTop: 10, alignItems: 'center'}]}>
+            <Text style={styles.bookPrice}>{bookData.price}</Text>
+            <Text style={styles.bookPages}>共 {bookData.pages} 页</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -49,6 +70,10 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
 
+  flexRow: {
+    flexDirection: 'row',
+  },
+
   center: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -63,6 +88,27 @@ const styles = StyleSheet.create({
   textContent: {
     marginTop: 10,
     marginBottom: 10,
+    marginLeft: 10,
+  },
+
+  bookTitle: {
+    width: 200,
+  },
+
+  bookPublisherAndAuthor: {
+    color: '#A3A3A3',
+    width: 200,
+    fontSize: 13,
+  },
+
+  bookPages: {
+    marginLeft: 10,
+    color: '#A7A0A0',
+  },
+
+  bookPrice: {
+    color: '#2BB2A3',
+    fontSize: 16,
   },
 
 });
