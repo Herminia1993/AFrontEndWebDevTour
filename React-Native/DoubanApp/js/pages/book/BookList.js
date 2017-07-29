@@ -31,7 +31,7 @@ export default class BookList extends Component {
 
     this.state = {
       dataSource: dataSource.cloneWithRows([]),
-      keywords: 'C语言',
+      keywords: '资治通鉴',
       showList: false,
     };
   }
