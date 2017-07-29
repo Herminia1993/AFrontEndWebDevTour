@@ -34,8 +34,8 @@ import {
 } from 'react-native';
 
 import BookList from './js/pages/book/BookList.js';
-import MusicList from './js/pages/music/MusicList.js';
 import MovieList from './js/pages/movie/MovieList.js';
+import MusicList from './js/pages/music/MusicList.js';
 
 // StatusBar.setHidden(true);
 export default class DoubanApp extends Component {
@@ -106,14 +106,14 @@ export default class DoubanApp extends Component {
            });
          }
         }>
-          <ScrollView>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image
-              style={{width: 200, height: 200, marginTop: 100}}
-              resizeMode='center'
-              source={{uri: 'https://imgsa.baidu.com/baike/w%3D268/sign=a8324ff660d0f703e6b292da30fb5148/500fd9f9d72a6059070cf8fb2a34349b033bba36.jpg'}}/>
-            </View>
-          </ScrollView>
+        <NavigatorIOS
+          style={{flex: 1}}
+          initialRoute={{
+            component: MusicList,
+            title: '音乐',
+            passProps: {},
+          }}
+          />
         </TabBarIOS.Item>
       </TabBarIOS>
     );

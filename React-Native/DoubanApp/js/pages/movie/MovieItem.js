@@ -130,6 +130,6 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginTop: 10,
     borderRadius: 3,
-  }
+  },
 
 });
