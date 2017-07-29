@@ -1,27 +1,26 @@
 /**
- * 图书列表
+ * 电影列表
  */
 
-'use strict';
+
+ 'use strict';
 
 import React, { Component } from 'react';
-
 import {
   View,
   StyleSheet,
-  TouchableOpacity,
   Text,
+  TouchableOpacity,
   ListView,
 } from 'react-native';
 
 import Util from '../../utils/Util.js';
 import Service from '../../utils/Service.js';
-import BookItem from './BookItem.js';
+import MovieItem from './MovieItem.js';
 import SearchBar from '../../components/Search.js'
-import BookDetail from './BookDetail.js';
+import DBWebView from '../../components/DBWebView.js';
 
-export default class BookList extends Component {
-
+export default class MovieList extends Component {
   constructor(props) {
     super(props);
 
@@ -31,7 +30,7 @@ export default class BookList extends Component {
 
     this.state = {
       dataSource: dataSource.cloneWithRows([]),
-      keywords: 'C语言',
+      keywords: '驴得水',
       showList: false,
     };
   }
@@ -49,7 +48,7 @@ export default class BookList extends Component {
           <View style={styles.flex_1}>
             <SearchBar
                value={this.state.keywords}
-               placeholder='请输入图书的名称'
+               placeholder='请输入电影的名称'
                clearButtonMode='while-editing'
                 onChangeText={this._textDidChange.bind(this)}/>
           </View>
@@ -72,7 +71,15 @@ export default class BookList extends Component {
     );
   }
 
-/* 组件回调 */
+  /*事件回调*/
+  _renderRow(rowData) {
+    return (
+      <MovieItem
+        movieData={rowData}
+        viewDetail={this._pushMovieDetailPage.bind(this, rowData)}
+        />
+    );
+  }
 
   _textDidChange(text) {
     this.setState({
@@ -81,7 +88,6 @@ export default class BookList extends Component {
   }
 
   _didSelectSearchButton() {
-
     if (this.state.keywords.length == 0) {
       alert('搜索词不能为空！');
       return;
@@ -89,26 +95,16 @@ export default class BookList extends Component {
     this._loadData();
   }
 
-  _renderRow(rowData) {
-    return (
-      <BookItem
-        bookData={rowData}
-        onPress={this._pushBookDetailPage.bind(this, rowData)}
-        />
-    );
-  }
-
-  // 查看详情
-  _pushBookDetailPage(rowData) {
-    var bookDetailRoute = {
-      component: BookDetail,
+  _pushMovieDetailPage(rowData) {
+    var movieDetailRoute = {
+      component: DBWebView,
       title: rowData.title,
       passProps: {
-        bookId: rowData.id,
+        url: rowData.alt,
       }
     };
 
-    this.props.navigator.push(bookDetailRoute);
+    this.props.navigator.push(movieDetailRoute);
   }
 
   /* 自定义方法 */
@@ -120,7 +116,7 @@ export default class BookList extends Component {
       rowHasChanged: (r1, r2) => r1 !== r2
     });
     var that = this;
-    var baseURL = Service.bookSearch + '?count=10&q=' + this.state.keywords;
+    var baseURL = Service.movieSearch + '?count=10&q=' + this.state.keywords;
 
     // 显示 loading
     this.setState({
@@ -129,24 +125,23 @@ export default class BookList extends Component {
 
     Util.get(baseURL,
       function(data) {
-      if (!data.books || !data.books.length) {
-         alert('图书服务出错');
-         retun;
+        if (!data.subjects || !data.subjects.length) {
+           alert('电影服务出错');
+           retun;
+        }
+        var movies = data.subjects;
+        that.setState({
+          dataSource: dataSource.cloneWithRows(movies),
+          showList: true,
+        });
+      },
+      function(error) {
+        alert(error);
       }
-      var books = data.books;
-      that.setState({
-        dataSource: dataSource.cloneWithRows(books),
-        showList: true,
-      });
-    },
-    function(error) {
-      alert(error);
-    }
-
-  );
+    );
   }
-}
 
+}
 
 const styles = StyleSheet.create({
   container: {

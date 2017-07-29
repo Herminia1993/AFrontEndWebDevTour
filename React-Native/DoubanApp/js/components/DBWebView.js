@@ -4,7 +4,10 @@
 
 'use strict';
 
-import React, { Component } from 'react';
+import React, {
+  Component,
+  PropTypes,
+} from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -18,15 +21,26 @@ import Util from '../utils/Util.js';
 
 export default class DBWebView extends Component {
 
+  static propTypes = {
+    url: PropTypes.string.isRequired,
+  };
+
   render() {
+
     return (
-      <View>
+      <View style={{flex: 1}}>
         {/*Web View*/}
         <WebView
-         contentInset={{top: 40}}
+         contentInset={{top: -46}}
          startInLoadingState={true}
-         style={{width: Util.screenSize.width, height: Util.screenSize.height-50}}
+         bounces={false}
+         style={{width: Util.screenSize.width, height: Util.screenSize.height-50, backgroundColor: 'darkseagreen'}}
          source={{uri: this.props.url}}
+         onError={
+           (error) => {
+             alert('Oops! 加载失败')
+           }
+         }
         >
         </WebView>
       </View>

@@ -34,9 +34,8 @@ import {
 } from 'react-native';
 
 import BookList from './js/pages/book/BookList.js';
-import Music from './js/pages/music/Music.js';
-import Movie from './js/pages/movie/Movie.js';
-// import DBWebView from './js/components/DBWebView.js';
+import MusicList from './js/pages/music/MusicList.js';
+import MovieList from './js/pages/movie/MovieList.js';
 
 // StatusBar.setHidden(true);
 export default class DoubanApp extends Component {
@@ -86,7 +85,14 @@ export default class DoubanApp extends Component {
            });
          }
         }>
-          <View style={{backgroundColor: 'blue', flex: 1}}></View>
+        <NavigatorIOS
+          style={{flex: 1}}
+          initialRoute={{
+            component: MovieList,
+            title: '电影',
+            passProps: {},
+          }}
+          />
         </TabBarIOS.Item>
 
         <TabBarIOS.Item
