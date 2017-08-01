@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Intro</title>
+    <style media="screen">
+    #footer {
+          background-color: black;
+          color: white;
+          clear: both;
+          text-align: center;
+          padding: 5px;
+      }
+
+    .button {
+      font-size: 40px;
+      background-color: lightgray;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>1. 写入 HTML 输出</h2>
+    <p>
+      JavaScript 能够直接写入 HTML 输出流中，比如执行下面的代码：
+    </p>
+
+
+    <xmp>
+      <script type="text/javascript">
+      // 直接写入 HTML 输出
+        document.write("<h3>This is a heading</h3>");
+        document.write("<p>This is a paragraph.</p>");
+      </script>
+   </xmp>
+
+  <p>将得到如下效果：</p>
+
+    <!-- JS 脚本 -->
+    <script type="text/javascript">
+      document.write("<h3>This is a heading</h3>");
+      document.write("<p>This is a paragraph.</p>");
+    </script>
+
+    <p>
+      您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+      如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+    </p>
+    <br>
+    <br>
+
+    <h2>2. 对事件作出反应</h2>
+
+    <p>JavaScript 能够对事件作出反应。比如对按钮的点击：</p>
+    <button type="button" onclick="alert('Welcome!')" class="button">点击按钮触发弹窗</button>
+    <br>
+    <br>
+    <br>
+
+    <h2>3. 改变 HTML 内容</h2>
+    <p id="demo1">
+    点击按钮，会调用 JavaScript 函数，从而改变 HTML 元素的内容。
+    </p>
+
+    <script>
+    function changeText() {
+      x = document.getElementById("demo1");  // 找到元素
+
+      // innerHTML 属性
+      if (x.innerHTML !== "Hello JavaScript!") {
+        x.innerHTML = "Hello JavaScript!";    // 改变内容
+      } else {
+        x.innerHTML = "Good bye JavaScript!";    // 改变内容
+      }
+
+    }
+    </script>
+
+    <button type="button" onclick="changeText()" class="button">点击按钮改变文字内容</button>
+    <br>
+    <br>
+    <br>
+
+    <h2>4. 改变 HTML 图像</h2>
+    <script type="text/javascript">
+      function changeImage() {
+        imgElement = document.getElementById('myimage');
+
+        // 这里用了 match 方法来查找匹配字符串
+        // src 属性
+        if (imgElement.src.match("bulbon")) {
+          imgElement.src = "http://www.w3school.com.cn/i/eg_bulboff.gif";
+        } else {
+          imgElement.src = "http://www.w3school.com.cn/i/eg_bulbon.gif";
+        }
+      }
+    </script>
+
+    <img id="myimage" onclick="changeImage()" src="http://www.w3school.com.cn/i/eg_bulbon.gif">
+
+    <p>点击灯泡来点亮或熄灭这盏灯</p>
+    <br>
+    <br>
+
+    <h2>5. 改变 HTML 样式</h2>
+    <p id="demo2" style="color: black;">
+      点击按钮，通过调用 JavaScript 函数，来改变 HTML 元素的样式：
+    </p>
+    <script type="text/javascript">
+      function changeTextColor() {
+        x = document.getElementById('demo2');
+
+        console.log(typeof x.style);
+        // style 属性
+        if (x.style.color === "black") {
+          x.style.color = "#ff0000";
+        } else {
+          x.style.color = "black";
+        }
+
+      }
+    </script>
+
+    <button type="button" onclick="changeTextColor()" class="button">点击按钮改变字体颜色</button>
+    <br>
+    <br>
+
+    <h2>6. 验证输入</h2>
+    <p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+
+    <input id="demo3" type="text">
+
+    <script type="text/javascript">
+      function submit() {
+        var x = document.getElementById("demo3").value;
+        if (x == "" || isNaN(x)) {
+          alert("请输入数字！");
+        }
+      }
+    </script>
+
+    <button type="button" onclick="submit()" class="button">提交</button>
+    <br>
+    <br>
+    <br>
+
+<div id="footer">
+  教程来源：
+  <a href="http://www.w3school.com.cn/js/js_intro.asp">W3School </a>
+</div>
+</body>
+
+</html>

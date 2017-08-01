@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>This is A Tutorial</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <style media="screen">
+        ol {
+            counter-reset: item
+        }
+
+        li {
+            display: block
+        }
+
+        li:before {
+            content: counters(item, ".") ". ";
+            counter-increment: item
+        }
+    </style>
+
+</head>
+
+<!-- gif 和 jpg 文件均可用作 HTML 背景。如果图像小于页面，图像会进行重复。 -->
+
+<body background="http://www.w3school.com.cn/i/eg_background.jpg">
+
+    <h1>JavaScript 学习</h1>
+    <ol>
+        <li>JS 基础
+            <ol>
+                <li><a href="./html/intro.html">JS 简介</a></li>
+                <li><a href="./html/intro.html">JS 实现</a></li>
+                <li>JS 输出</li>
+                <li>JS 语句</li>
+            </ol>
+        </li>
+        <li>JS HTML DOM
+            <ol>
+                <li>DOM 简介</li>
+                <li>DOM HTML</li>
+                <li>DOM CSS</li>
+                <li>DOM 事件</li>
+                <li>DOM 节点</li>
+            </ol>
+        </li>
+        <li>JS 对象
+            <ol>
+                <li>JS 对象</li>
+                <li>JS 数字</li>
+                <li>JS 字符串</li>
+            </ol>
+        </li>
+        <li>JS Window
+            <ol>
+                <li>JS Window</li>
+                <li>JS Screen</li>
+                <li>JS Location</li>
+            </ol>
+        </li>
+        <li>JS 库
+            <ol>
+                <li>JS 库</li>
+                <li>JS jQuery</li>
+                <li>JS Prototype</li>
+            </ol>
+        </li>
+        <li>ECMAScript</li>
+
+    </ol>
+
+</body>
+
+</html>
