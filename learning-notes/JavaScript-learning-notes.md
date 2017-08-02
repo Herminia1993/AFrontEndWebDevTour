@@ -81,12 +81,34 @@ JavaScript 通常用于操作 HTML 元素。
   - JavaScript 函数是将语句组合在块中的典型例子
 - JavaScript 对大小写敏感
 - 空格：JavaScript 会忽略多余的空格，我们可以通过适当添加空格，来提高其可读性
-  ```
+  ``` JavaScript
   var name="Hello";
   var name = "Hello";
   ```
 - 对代码行进行折行：可以在文本字符串中使用反斜杠对代码行进行换行。
-  ```
+  ``` JavaScript
   document.write("Hello \
   World!");
   ```
+  
+#### 1.5 JavaScript 注释
+单行注释：
+``` JavaScript
+// 输出标题：
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+//document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+```
+
+行末注释：
+```
+var x=5;    // 声明 x 并把 5 赋值给它
+var y=x+2;  // 声明 y 并把 x+2 赋值给它
+```
+
+
+``` JavaScript
+/*
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+*/
+```
