@@ -4,6 +4,7 @@
 - [W3CSchool](http://www.w3school.com.cn/js/index.asp)
 - [完整的 JavaScript 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
 - [完整的 HTML DOM 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
+- [https://jsfiddle.net](https://jsfiddle.net)
 
 ## 问题汇总
 - [什么是脚本语言？](https://zh.wikipedia.org/wiki/脚本语言)
@@ -58,9 +59,9 @@ JavaScript 可以做什么？
 
 
 #### 1.3 JavaScript 输出
-[本节完整示例代码](./JavaScriptExamples/html/02_usage.html)
+[本节完整示例代码](./JavaScriptExamples/html/03_write.html)
 
 JavaScript 通常用于操作 HTML 元素。
-- 操作 HTML 元素：如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法
-- 写到文档输出：
-- 注意：请使用 document.write() 仅仅向文档输出写内容，如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖
+- 操作 HTML 元素：如需从 JavaScript 访问某个 HTML 元素，您可以使用 `document.getElementById(id)` 方法
+- 写到文档输出：如需通过 JavaScript 添加某个 HTML 元素，您可以使用 `document.write()` 方法
+- ⚠️注意：请使用 `document.write()` 仅仅向文档输出写内容，如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖
