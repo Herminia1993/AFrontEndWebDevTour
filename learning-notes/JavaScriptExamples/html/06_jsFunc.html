@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Functions</title>
+</head>
+
+<body>
+
+    <div>
+      <button onclick="alertWelcome('Bill Gates','CEO')">欢迎比尔盖茨先生！</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div>
+    <button onclick="alert('3 + 4 =' + add(0, -1))">计算一下 3 + 4 吧</button>
+    </div>
+
+    <script>
+
+    /**
+     * JavaScript 变量的生存期
+     * JavaScript 变量的生命期从它们被声明的时间开始。
+     * 局部变量会在函数运行以后被删除。
+     * 全局变量会在页面关闭后被删除。
+     *
+     */
+
+        // 在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它。
+        var num = 100;
+
+        // 如果您把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。
+        // 即使它在函数内执行。
+        // aNum = 15;
+
+        // 带有参数的返回值
+        function alertWelcome(name, job) {
+            aNum = 15;
+            alert("Welcome " + name + ", the " + job);
+        }
+
+        // 带有返回值的函数
+        function add(x, y) {
+            if (x == 0 && y == 0) {
+              return;  // 希望退出函数时 ，也可使用 return 语句
+            }
+            // 在 JavaScript 函数内部声明的变量（使用 var）是局部变量，
+            // 所以只能在函数内部访问它。（该变量的作用域是局部的）。
+            // 只要函数运行完毕，本地变量就会被删除。
+            var z = x + y;
+
+            if (z > num) {
+              return num;
+            }
+
+            if (z < 0) {
+              return aNum;
+            }
+
+            return z;
+        }
+
+    </script>
+
+</body>
+
+</html>

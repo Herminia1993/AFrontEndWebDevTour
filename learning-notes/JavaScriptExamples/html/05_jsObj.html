@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Object Intro</title>
+  </head>
+  <body>
+
+    <script>
+    function print(value) {
+      document.write("<p>" + value + "</p>");
+    }
+
+    // 创建一个 JavaScript 字符串对象
+    var txt = "Hello";
+
+    txt.length = 5;  // 字符串对象拥有内建的属性 length
+    print("o 在第 " + txt.indexOf("o") + " 位");  // 字符串对象同时拥有若干个内建的方法
+
+    // 创建 JavaScript 对象
+    person = new Object();
+    person.firstName = "Bill";
+    person.lastName = "Gates";
+    person.age = 56;
+    person.eyeColor = "blue";
+    print(person.firstName + " is " + person.age + " years old.");
+
+    // 访问对象的属性 objectName.propertyName
+    var message = "Hello World!";
+    var x = message.length;
+    print(x);
+
+
+    // 访问对象的方法  objectName.methodName()
+    var y = message.toUpperCase();
+    print(y);
+
+
+    </script>
+  </body>
+</html>
