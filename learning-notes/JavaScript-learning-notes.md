@@ -1,9 +1,16 @@
 # JavaScript 学习笔记
 
+## 相关资源
 - [W3CSchool](http://www.w3school.com.cn/js/index.asp)
 - [完整的 JavaScript 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
 - [完整的 HTML DOM 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
 
+## 问题汇总
+- [网站为什么 JS 调用尽量放到网页底部？](https://www.zhihu.com/question/34147508)
+- [JavaScript 中字符串变量使用单引号和双引号的利弊？](https://www.zhihu.com/question/21168673)
+- [在JS\JQ中，究竟何时用单引号''、双引号“”、和不用引号呢？](https://segmentfault.com/q/1010000004519527)
+
+## 学习大纲
 ### 什么是 JavaScript
 
 JavaScript 是一种[脚本语言](https://zh.wikipedia.org/wiki/脚本语言)。
@@ -98,3 +105,4 @@ if(x == "" || isNaN(x)) {
 ```
 
 #### 1.3 JavaScript 输出
+
