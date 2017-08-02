@@ -30,18 +30,26 @@ JavaScript 可以用来写前端、后端，甚至移动端应用。
 #### 1.1 简介
 [本节完整示例代码](./JavaScriptExamples/html/01_intro.html)
 
+JavaScript 可以做什么？
 - 写入 HTML 输出
+- 对事件作出反应
+- 改变 HTML 内容
+- 改变 HTML 图像：JavaScript 能够改变任意 HTML 元素的大多数属性，而不仅仅是图片。
+- 改变 HTML 样式：改变 HTML 元素的样式，属于改变 HTML 属性的变种。
+- 验证输入    
+
+示例代码（写入 HTML 输出）：
 ``` JavaScript
 document.write("<h1>This is a heading</h1>");
 document.write("<p>This is a paragraph</p>");
 ```
 
-- 对事件作出反应
+示例代码（对事件作出反应）：
 ``` JavaScript
 <button type="button" onclick="alert('Welcome!')">点击这里</button>
 ```
 
-- 改变 HTML 内容
+示例代码（改变 HTML 内容）：
 注：`document.getElementByID("some id")` 这个方法是 HTML DOM 中定义的。
     DOM（文档对象模型）是用以访问 HTML 元素的正式 W3C 标准。
 ``` JavaScript
@@ -49,7 +57,7 @@ x = document.getElementById("demo");  //查找元素
 x.innerHTML = "Hello JavaScript";    //改变内容
 ```
 
-- 改变 HTML 图像：JavaScript 能够改变任意 HTML 元素的大多数属性，而不仅仅是图片。
+示例代码（改变 HTML 图像）：
 ``` JavaScript
 element = document.getElementById('myimage');
 if (element.src.match("bulbon")) {
@@ -62,13 +70,13 @@ if (element.src.match("bulbon")) {
 }
 ```
 
-- 改变 HTML 样式：改变 HTML 元素的样式，属于改变 HTML 属性的变种。
+示例代码（改变 HTML 样式）：
 ``` JavaScript
 x = document.getElementById("demo");  //找到元素
 x.style.color = "#ff0000";           //改变样式
 ```
 
-- 验证输入
+示例代码（验证输入）：
 ``` JavaScript
 var x = document.getElementById("myinput").value;
 if(x == "" || isNaN(x)) {
