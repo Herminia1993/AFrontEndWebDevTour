@@ -89,18 +89,18 @@ if(x == "" || isNaN(x)) {
 
 [本节完整示例代码](./JavaScriptExamples/html/02_usage.html)
 
-- HTML 中的脚本必须位于 <script> 与 </script> 标签之间。
-- 脚本可被放置在 HTML 页面的 <body> 和 <head> 部分中。
-- 那些老旧的实例可能会在 <script> 标签中使用 type="text/javascript"。现在已经不必这样做了。JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言。
+- HTML 中的脚本必须位于 `<script>` 与 `</script>` 标签之间。
+- 脚本可被放置在 HTML 页面的 `<body>` 和 `<head>` 部分中。
+- 那些老旧的实例可能会在 `<script>` 标签中使用 `type="text/javascript"`。现在已经不必这样做了。JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言。
 - 您可以在 HTML 文档中放入不限数量的脚本。
-- 脚本可位于 HTML 的 <body> 或 <head> 部分中，或者同时存在于两个部分中。
-- 通常的做法是把函数放入 <head> 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。
+- 脚本可位于 HTML 的 `<body>` 或 `<head>` 部分中，或者同时存在于两个部分中。
+- 通常的做法是把函数放入 `<head>` 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。
 - [网站为什么 JS 调用尽量放到网页底部？](https://www.zhihu.com/question/34147508)（推荐阅读）
 - 外部的 JavaScript：
   - 可以把脚本保存到外部文件中。外部文件通常包含被多个网页使用的代码
   - 外部 JavaScript 文件的文件扩展名是 .js
-  - 在 <head> 或 <body> 中引用脚本文件都是可以的。实际运行效果与在 <script> 标签中编写脚本完全一致
-  - 如需使用外部文件，请在 <script> 标签的 "src" 属性中设置该 .js 文件。
+  - 在 `<head>` 或 `<body>` 中引用脚本文件都是可以的。实际运行效果与在 <script> 标签中编写脚本完全一致
+  - 如需使用外部文件，请在 `<script>` 标签的 "src" 属性中设置该 .js 文件。
 
 
 示例代码（引入外部的 js 文件）：
