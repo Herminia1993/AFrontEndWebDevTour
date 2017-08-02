@@ -100,15 +100,45 @@ document.getElementById("myH1").innerHTML="Welcome to my Homepage";
 ```
 
 行末注释：
-```
+``` JavaScript
 var x=5;    // 声明 x 并把 5 赋值给它
 var y=x+2;  // 声明 y 并把 x+2 赋值给它
 ```
 
-
+多行注释：
 ``` JavaScript
 /*
 document.getElementById("myH1").innerHTML="Welcome to my Homepage";
 document.getElementById("myP").innerHTML="This is my first paragraph.";
 */
 ```
+
+#### 1.6 JavaScript 变量
+> 变量是存储信息的容器。
+
+- 变量的命名：变量可以使用短名称（比如 x 和 y），也可以使用描述性更好的名称（比如 age）
+  - 变量必须以字母开头
+  - 变量也能以 $ 和 _ 符号开头（不推荐）
+  - 变量名称对大小写敏感（y 和 Y 是不同的变量）
+- JavaScript 变量能保存多种数据类型
+- 声明（创建） JavaScript 变量
+  - 在 JavaScript 中创建变量通常称为“声明”变量
+  - 我们使用 `var` 关键词来声明变量
+    ``` JavaScript
+    var personName;
+    var carBrandName = "Volvo";
+    ```
+  - 可以在一条语句中声明很多变量
+	 ``` JavaScript
+	 var name="Gates", age=56, job="CEO";
+	 ```
+  - 如果在声明变量时没有赋值，这个变量的值实际上是 undefined
+    ``` JavaScript
+    var carname;  //  undefined
+    ```
+  - 如果重新声明 JavaScript 变量，该变量的值不会丢失
+	 ``` JavaScript
+	 // 在以下两条语句执行后，变量 carname 的值依然是 "Volvo"：
+	 var carname="Volvo";
+	 var carname;
+	 ```
