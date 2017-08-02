@@ -50,7 +50,7 @@ document.write("<p>This is a paragraph</p>");
 ```
 
 示例代码（改变 HTML 内容）：
-注：`document.getElementByID("some id")` 这个方法是 HTML DOM 中定义的。
+> 注：`document.getElementByID("some id")` 这个方法是 HTML DOM 中定义的。
     DOM（文档对象模型）是用以访问 HTML 元素的正式 W3C 标准。
 ``` JavaScript
 x = document.getElementById("demo");  //查找元素
