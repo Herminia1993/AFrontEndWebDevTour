@@ -65,3 +65,28 @@ JavaScript 通常用于操作 HTML 元素。
 - 操作 HTML 元素：如需从 JavaScript 访问某个 HTML 元素，您可以使用 `document.getElementById(id)` 方法
 - 写到文档输出：如需通过 JavaScript 添加某个 HTML 元素，您可以使用 `document.write()` 方法
 - ⚠️注意：请使用 `document.write()` 仅仅向文档输出写内容，如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖
+
+#### 1.4 JavaScript 语句
+> JavaScript 语句向浏览器发出的命令。语句的作用是告诉浏览器该做什么。
+- 分号 `;`
+  - 分号用于分隔 JavaScript 语句，通常我们在每条可执行的语句结尾添加分号
+  - 在 JavaScript 中，分号是可以省略的，但是当一行中有多条语句时，分号不能省略
+- JavaScript 代码
+  - JavaScript 代码（或者只有 JavaScript）是 JavaScript 语句的序列
+  - JavaScript 是脚本语言。浏览器会在读取代码时，会按照编写顺序逐行地执行脚本代码。而对于传统编程来说，会在执行前对所有代码进行编译
+- JavaScript 代码块
+  - JavaScript 语句通过代码块的形式进行组合
+  - 块由左花括号开始，由右花括号结束
+  - 块的作用是使语句序列一起执行
+  - JavaScript 函数是将语句组合在块中的典型例子
+- JavaScript 对大小写敏感
+- 空格：JavaScript 会忽略多余的空格，我们可以通过适当添加空格，来提高其可读性
+  ```
+  var name="Hello";
+  var name = "Hello";
+  ```
+- 对代码行进行折行：可以在文本字符串中使用反斜杠对代码行进行换行。
+  ```
+  document.write("Hello \
+  World!");
+  ```
