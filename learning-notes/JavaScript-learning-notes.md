@@ -6,6 +6,7 @@
 - [完整的 HTML DOM 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
 
 ## 问题汇总
+- [什么是脚本语言？](https://zh.wikipedia.org/wiki/脚本语言)
 - [网站为什么 JS 调用尽量放到网页底部？](https://www.zhihu.com/question/34147508)
 - [JavaScript 中字符串变量使用单引号和双引号的利弊？](https://www.zhihu.com/question/21168673)
 - [在JS\JQ中，究竟何时用单引号''、双引号“”、和不用引号呢？](https://segmentfault.com/q/1010000004519527)
@@ -13,7 +14,7 @@
 ## 学习大纲
 ### 什么是 JavaScript
 
-JavaScript 是一种[脚本语言](https://zh.wikipedia.org/wiki/脚本语言)。
+JavaScript 是一种 [脚本语言](https://zh.wikipedia.org/wiki/脚本语言)。
 <br>
 JavaScript 是一种轻量级的编程语言。
 <br>
@@ -94,8 +95,8 @@ if(x == "" || isNaN(x)) {
   - 如需使用外部文件，请在 <script> 标签的 "src" 属性中设置该 .js 文件。
 
 
-引入外部的 js 文件：
-```
+示例代码（引入外部的 js 文件）：
+``` JavaScript
 <!DOCTYPE html>
 <html>
 <body>
