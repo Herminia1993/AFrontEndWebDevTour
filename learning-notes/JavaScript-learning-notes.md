@@ -5,6 +5,7 @@
 - [完整的 JavaScript 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
 - [完整的 HTML DOM 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
 - [https://jsfiddle.net](https://jsfiddle.net)
+- [Chrome DevTools](https://developers.google.com/web/tools/)
 
 ## 问题汇总
 - [什么是脚本语言？](https://zh.wikipedia.org/wiki/脚本语言)
@@ -118,7 +119,7 @@ document.getElementById("myP").innerHTML="This is my first paragraph.";
 
 - 变量的命名：变量可以使用短名称（比如 x 和 y），也可以使用描述性更好的名称（比如 age）
   - 变量必须以字母开头
-  - 变量也能以 $ 和 _ 符号开头（不推荐）
+  - 变量也能以 `$` 和 `_` 符号开头（不推荐）
   - 变量名称对大小写敏感（y 和 Y 是不同的变量）
 - JavaScript 变量能保存多种数据类型
 - 声明（创建） JavaScript 变量
@@ -132,7 +133,7 @@ document.getElementById("myP").innerHTML="This is my first paragraph.";
 	 ``` JavaScript
 	 var name="Gates", age=56, job="CEO";
 	 ```
-  - 如果在声明变量时没有赋值，这个变量的值实际上是 undefined
+  - 如果在声明变量时没有赋值，这个变量的值实际上是 `undefined`
     ``` JavaScript
     var carname;  //  undefined
     ```
@@ -142,3 +143,5 @@ document.getElementById("myP").innerHTML="This is my first paragraph.";
 	 var carname="Volvo";
 	 var carname;
 	 ```
+
+#### 1.7 JavaScript 数据类型（字符串、数字、布尔、数组、对象、Null、Undefined）
