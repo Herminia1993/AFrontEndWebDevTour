@@ -9,12 +9,12 @@
           background-color: black;
           color: white;
           clear: both;
-          text-align: center;
+          text-align: left;
           padding: 5px;
       }
 
     .button {
-      font-size: 40px;
+      font-size: 16px;
       background-color: lightgray;
     }
 
@@ -138,6 +138,8 @@
         var x = document.getElementById("demo3").value;
         if (x == "" || isNaN(x)) {
           alert("请输入数字！");
+        } else {
+          alert(x);
         }
       }
     </script>
@@ -149,7 +151,10 @@
 
 <div id="footer">
   教程来源：
-  <a href="http://www.w3school.com.cn/js/js_intro.asp">W3School </a>
+  <a style="color: white;" href="http://www.w3school.com.cn/js/js_intro.asp">W3School </a>
+  <br>
+  笔记：
+  <a style="color: white;" href="https://github.com/ShannonChenCHN/AFrontEndWebDevTour/blob/master/learning-notes/JavaScript-learning-notes.md">JavaScript 学习笔记</a>
 </div>
 </body>
 
