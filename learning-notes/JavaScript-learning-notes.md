@@ -38,52 +38,6 @@ JavaScript 可以做什么？
 - 改变 HTML 样式：改变 HTML 元素的样式，属于改变 HTML 属性的变种。
 - 验证输入    
 
-示例代码（写入 HTML 输出）：
-``` JavaScript
-document.write("<h1>This is a heading</h1>");
-document.write("<p>This is a paragraph</p>");
-```
-
-示例代码（对事件作出反应）：
-``` JavaScript
-<button type="button" onclick="alert('Welcome!')">点击这里</button>
-```
-
-示例代码（改变 HTML 内容）：
-> 注：`document.getElementByID("some id")` 这个方法是 HTML DOM 中定义的。
-    DOM（文档对象模型）是用以访问 HTML 元素的正式 W3C 标准。
-``` JavaScript
-x = document.getElementById("demo");  //查找元素
-x.innerHTML = "Hello JavaScript";    //改变内容
-```
-
-示例代码（改变 HTML 图像）：
-``` JavaScript
-element = document.getElementById('myimage');
-if (element.src.match("bulbon")) {
-
-  element.src = "http://www.w3school.com.cn/i/eg_bulboff.gif";
-  
-} else {
-
-  element.src = "http://www.w3school.com.cn/i/eg_bulbon.gif";
-}
-```
-
-示例代码（改变 HTML 样式）：
-``` JavaScript
-x = document.getElementById("demo");  //找到元素
-x.style.color = "#ff0000";           //改变样式
-```
-
-示例代码（验证输入）：
-``` JavaScript
-var x = document.getElementById("myinput").value;
-if(x == "" || isNaN(x)) {
-	alert("Not Numeric");
-}
-
-```
 
 #### 1.2 JavaScript 的使用
 
@@ -103,15 +57,10 @@ if(x == "" || isNaN(x)) {
   - 如需使用外部文件，请在 `<script>` 标签的 "src" 属性中设置该 .js 文件。
 
 
-示例代码（引入外部的 js 文件）：
-``` JavaScript
-<!DOCTYPE html>
-<html>
-<body>
-<script src="myScript.js"></script>
-</body>
-</html>
-```
-
 #### 1.3 JavaScript 输出
+[本节完整示例代码](./JavaScriptExamples/html/02_usage.html)
 
+JavaScript 通常用于操作 HTML 元素。
+- 操作 HTML 元素：如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法
+- 写到文档输出：
+- 注意：请使用 document.write() 仅仅向文档输出写内容，如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖
