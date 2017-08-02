@@ -261,6 +261,7 @@
 - [携程：React Native 业务实践和性能优化](http://www.infoq.com/cn/presentations/react-native-business-practice-and-performance-optimization?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
 - [bang：React Native通信机制详解](http://blog.cnbang.net/tech/2698/)
 - [iOS 动态更新方案对比:JSPatch vs React Native](https://blog.cnbang.net/tech/3237/)
+- [bestswifter：React Native 从入门到原理](http://www.jianshu.com/p/978c4bd3a759)
 - [React Native 在 Glow 的实践](http://tech.glowing.com/cn/react-native-at-glow/)
 - [在 Android 中集成 React Native 的经验分享](http://tech.glowing.com/cn/react_native_practice_on_android/)
 - [vczero: H5、React Native、Native应用对比分析](https://github.com/vczero/vczero.github.io/blob/master/react_native/H5、React%20Native、Native应用对比分析.md)
