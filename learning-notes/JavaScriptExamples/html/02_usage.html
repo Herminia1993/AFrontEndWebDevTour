@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Usage</title>
+    <script>
+      function callJSInHead() {
+        element = document.getElementById("demo");
+        element.innerHTML = "你点了第一个按钮";
+        element.style.color = 'red';
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="demo">大标题</h1>
+
+    <h3>在 head 中使用 JavaScript 函数</h3>
+    <button type="button" onclick="callJSInHead()">点一下试试</button>
+
+
+
+    <h3>在 body 中使用 JavaScript 函数</h3>
+    <button type="button" onclick="callJSInBody()">再点一下试试</button>
+
+<!-- 我们把 JavaScript 放到了页面代码的底部，这样就可以确保在 <p> 元素创建之后再执行脚本。 -->
+    <script>
+      function callJSInBody() {
+        element = document.getElementById("demo");
+        element.innerHTML = "你点了第二个按钮";
+        element.style.color = 'blue';
+      }
+    </script>
+
+
+    <h3>引入外部 JavaScript 文件</h3>
+    <button type="button" onclick="callJSInExternalFile()">还想点吗？</button>
+    <script src="../js/01_usage.js" charset="utf-8"></script>
+
+  </body>
+</html>
