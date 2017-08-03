@@ -1,10 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>JS Conditions</title>
-  </head>
-  <body>
+</head>
 
-  </body>
+<body>
+
+    <script>
+        function print(value) {
+            document.write("<p>" + value + "</p>");
+        }
+
+        // if-else 语句
+        document.write("<h3>if-else 语句</h3>");
+
+        document.write("\
+        <xmp>\
+        var time = 15;\n\
+        if (time < 10) {\n\
+            x = \"Good morning\";\n\
+        } else if (time < 20) {\n\
+            x = \"Good day\";\n\
+        } else {\n\
+            x = \"Good evening\";\n\
+        }\n\
+        </xmp>\
+        ");
+
+        var time = 15;
+        if (time < 10) {
+
+            x = "Good morning";
+
+        } else if (time < 20) {
+
+            x = "Good day";
+
+        } else {
+
+            x = "Good evening";
+        }
+        print("结果：x = " + x + ";");
+
+        document.write("<br>");
+
+        // switch 语句
+        document.write("<h3>switch 语句</h3>");
+
+        document.write("\
+        <xmp>\
+        var day = new Date().getDay();\n\
+        switch (day) {\n\
+        case 1:\n\
+          x = \"Today it's Monday\";\n\
+          break;\n\
+        case 2:\n\
+          x = \"Today it's Tuesday\";\n\
+          break;\n\
+        case 3:\n\
+          x = \"Today it's Wednesday\";\n\
+          break;\n\
+        case 4:\n\
+          x = \"Today it's Thursday\";\n\
+          break;\n\
+        case 5:\n\
+          x = \"Today it's Friday\";\n\
+          break;\n\
+        default:\n\
+          x = \"Today it's weekend\";\n\
+          break;\n\
+        }\n\
+        </xmp>\n\
+        ");
+
+        var day = new Date().getDay();
+        switch (day) {
+        case 1:
+          x = "Today it's Monday";
+          break;
+        case 2:
+          x = "Today it's Tuesday";
+          break;
+        case 3:
+          x = "Today it's Wednesday";
+          break;
+        case 4:
+          x = "Today it's Thursday";
+          break;
+        case 5:
+          x = "Today it's Friday";
+          break;
+        default:
+          x = "Today it's weekend";
+          break;
+        }
+
+        print("结果：x = " + x + ";");
+
+    </script>
+
+</body>
+
 </html>

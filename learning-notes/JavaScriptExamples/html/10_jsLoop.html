@@ -1,10 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>JS Loops</title>
-  </head>
-  <body>
+</head>
 
-  </body>
+<body>
+
+    <script>
+        /*
+         * For 循环
+         */
+        document.write("<h3>For 循环</h3>");
+        var cars = ["BMW", "Das", "Volvo", "Benz"];
+        for (var i = 0, len = cars.length; i < len; i++) {
+            document.write(cars[i] + "<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+
+        // 可以省略语句 1（比如在循环开始前已经设置了值时）
+        var i = 2, len = cars.length;
+        for (; i < len; i++) {
+            document.write(cars[i] + "<br>");
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        // 如果您省略了语句 2，那么必须在循环内提供 break。否则循环就无法停下来。
+        // 这样有可能令浏览器崩溃。
+        // var i = 2;
+        // for (;; i++) {
+        //     document.write(cars[i] + "<br>");
+        // }
+
+        // 语句 3 也可以省略（比如当循环内部有相应的代码时）
+        var i = 0, len = cars.length;
+        for (; i < len; ) {
+          document.write(cars[i] + "<br>");
+          i++;
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        /*
+         * For/In 循环
+         */
+        document.write("<h3>For/In 循环</h3>");
+        var person = {
+          firstName: "John",
+          lastName: "Doe",
+          age: 25};
+        var txt = "";
+        // for/in 语句循环遍历对象的属性
+        for (x in person) {
+          txt = txt + x + ": " + person[x] + ";" + "\n";
+        }
+        document.write(txt + "<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        /*
+         * While 循环
+         */
+        document.write("<h3>While 循环</h3>");
+        cars = ["BMW", "Volvo", "Saab", "Ford"];
+        var i = 0;
+        while (cars[i]) {
+          document.write(cars[i] + "<br>");
+          i++;
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        /*
+         * break 语句
+         * break 语句（不带标签引用），只能用在循环或 switch 中。
+         */
+        document.write("<h3>break 语句</h3>");
+        var a = "";
+         for (i = 0; i < 10; i++) {
+            if (i == 3) {
+              break;
+            }
+           a = a + "The number is " + i + "<br>";
+
+          }
+          document.write(a);
+          document.write("<br>");
+          document.write("<br>");
+
+
+          /*
+           * continue 语句
+           * continue 语句（带有或不带标签引用）只能用在循环中。
+           */
+          document.write("<h3>continue 语句</h3>");
+          var b = "";
+           for (i = 0; i <= 10; i++) {
+              if (i == 3) continue;
+               b = b + "The number is " + i + "<br>";
+           }
+           document.write(b);
+           document.write("<br>");
+           document.write("<br>");
+
+           /*
+            * JavaScript 标签
+            * 通过标签引用，break 语句可用于跳出任何 JavaScript 代码块：
+            */
+           document.write("<h3>JavaScript 标签</h3>");
+            cars=["BMW", "Volvo", "Saab", "Ford"];
+             list: {
+               document.write(cars[0] + "<br>");
+               document.write(cars[1] + "<br>");
+               document.write(cars[2] + "<br>");
+
+               break list;
+               document.write(cars[3] + "<br>");
+               document.write(cars[4] + "<br>");
+               document.write(cars[5] + "<br>");
+             }
+
+    </script>
+
+</body>
+
 </html>

@@ -1,41 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>JS Object Intro</title>
-  </head>
-  <body>
+</head>
+
+<body>
+
+  <h2>JavaScript 是面向对象的语言，但 JavaScript 不使用类。</h2>
+  <h2>在 JavaScript 中，不会创建类，也不会通过类来创建对象（就像在其他面向对象的语言中那样）。</h2>
+  <h2>JavaScript 基于 prototype，而不是基于类的。</h2>
+
 
     <script>
-    function print(value) {
-      document.write("<p>" + value + "</p>");
-    }
+        function print(value) {
+            document.write("<p>" + value + "</p>");
+        }
 
-    // 创建一个 JavaScript 字符串对象
-    var txt = "Hello";
+        // 创建一个 JavaScript 字符串对象
+        var txt = "Hello";
 
-    txt.length = 5;  // 字符串对象拥有内建的属性 length
-    print("o 在第 " + txt.indexOf("o") + " 位");  // 字符串对象同时拥有若干个内建的方法
+        txt.length = 5; // 字符串对象拥有内建的属性 length
+        print("o 在第 " + txt.indexOf("o") + " 位"); // 字符串对象同时拥有若干个内建的方法
+        document.write("<br>");
+        document.write("<br>");
 
-    // 创建 JavaScript 对象
-    person = new Object();
-    person.firstName = "Bill";
-    person.lastName = "Gates";
-    person.age = 56;
-    person.eyeColor = "blue";
-    print(person.firstName + " is " + person.age + " years old.");
+        // 创建 JavaScript 对象的方法之一：定义并创建对象的实例
+        document.write("<h3>直接定义并创建对象的实例</h3>");
+        person = new Object();
+        person.firstName = "Bill";
+        person.lastName = "Gates";
+        person.age = 56;
+        person.eyeColor = "blue";
+        print(person.firstName + " is " + person.age + " years old.");
+        document.write("<br>");
+        document.write("<br>");
 
-    // 访问对象的属性 objectName.propertyName
-    var message = "Hello World!";
-    var x = message.length;
-    print(x);
+        // 使用字面量语法创建对象
+        document.write("<h3>使用字面量语法创建对象</h3>");
+        uncle = {
+          firstName: "John",
+          lastName: "Doe",
+          age: 50,
+          eyeColor: "blue"
+        };
+        print(uncle.firstName + " is " + uncle.age + " years old.");
+        document.write("<br>");
+        document.write("<br>");
+
+        // 创建 JavaScript 对象的方法之二：使用函数来定义对象，然后创建新的对象实例
+        document.write("<h3>使用函数来定义对象，然后创建新的对象实例</h3>");
+        function man(firstname, lastname, age, eyecolor) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.age = age;
+            this.eyecolor = eyecolor;
+        }
+        var myFather = new man("Bill", "Gates", 56, "blue");
+
+        print(myFather.firstname + " is " + myFather.age + " years old.");
+        document.write("<br>");
+        document.write("<br>");
+
+        // 访问对象的属性 objectName.propertyName
+        document.write("<h3>访问对象的属性</h3>");
+        var message = "Hello World!";
+        var x = message.length;
+        var y = message["length"];
+        print(x);
+        print(y);
+        document.write("<br>");
+        document.write("<br>");
+
+        // 访问对象的方法  objectName.methodName()
+        document.write("<h3>访问对象的方法</h3>");
+        var y = message.toUpperCase();
+        print(y);
+        document.write("<br>");
+        document.write("<br>");
+
+        // 向已有对象添加新属性
+        document.write("<h3>向已有对象添加新属性</h3>");
+        person.country = "U.S.A";
+        print(person.firstName + " is in " + person.country + ";");
+        document.write("<br>");
+        document.write("<br>");
+
+        // 向已有对象添加新方法
+        document.write("<h3>向已有对象添加新方法</h3>");
+        function car(brand, size, color) {
+          this.brand = brand;
+          this.size = size;
+          this.color = color;
+
+          this.changeColor = changeColor;
+          function changeColor(color) {
+            this.color = color;
+          }
+
+          this.changePrice = function (price) {
+            this.price = price;
+          }
+        }
+
+        var aCar = new car("Benz", "big", "gray");
+        aCar.changeColor("red");
+        print(aCar.color);
+
+        aCar.changePrice("$4'0000");
+        print(aCar.price);
+
+        aCar.changePrice("$5'0000");
+        print(aCar.price);
+        document.write("<br>");
+        document.write("<br>");
 
 
-    // 访问对象的方法  objectName.methodName()
-    var y = message.toUpperCase();
-    print(y);
-
+        // for...in 语句循环遍历对象的属性
+        document.write("<h3>for...in 语句循环遍历对象的属性</h3>");
+        for (var propertyName in aCar) {
+          print(propertyName + ": " + aCar[propertyName] + "; \n");
+        }
+        document.write("<br>");
+        document.write("<br>");
 
     </script>
-  </body>
+</body>
+
 </html>
