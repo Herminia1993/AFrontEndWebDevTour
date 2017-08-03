@@ -2,9 +2,9 @@
 
 ## 相关资源
 - [W3CSchool](http://www.w3school.com.cn/js/index.asp)
-- [JavaScript 对象参考手册：](http://www.w3school.com.cn/jsref/index.asp)
-- [Browser 对象参考手册：](http://www.w3school.com.cn/jsref/index.asp)
-- [HTML DOM 对象参考手册：](http://www.w3school.com.cn/jsref/index.asp)
+- [JavaScript 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)
+- [Browser 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)
+- [HTML DOM 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)
 - [ECMAScript 教程](http://www.w3school.com.cn/js/index_pro.asp)
 - [https://jsfiddle.net](https://jsfiddle.net)
 - [Chrome DevTools](https://developers.google.com/web/tools/)
