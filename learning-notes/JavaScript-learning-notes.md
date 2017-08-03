@@ -2,8 +2,10 @@
 
 ## 相关资源
 - [W3CSchool](http://www.w3school.com.cn/js/index.asp)
-- [完整的 JavaScript 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
-- [完整的 HTML DOM 对象参考手册（包含实例）](http://www.w3school.com.cn/jsref/index.asp)
+- [JavaScript 对象参考手册：](http://www.w3school.com.cn/jsref/index.asp)
+- [Browser 对象参考手册：](http://www.w3school.com.cn/jsref/index.asp)
+- [HTML DOM 对象参考手册：](http://www.w3school.com.cn/jsref/index.asp)
+- [ECMAScript 教程](http://www.w3school.com.cn/js/index_pro.asp)
 - [https://jsfiddle.net](https://jsfiddle.net)
 - [Chrome DevTools](https://developers.google.com/web/tools/)
 
@@ -96,21 +98,21 @@ JavaScript 通常用于操作 HTML 元素。
 单行注释：
 ``` JavaScript
 // 输出标题：
-document.getElementById("myH1").innerHTML="Welcome to my Homepage";
-//document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myH1").innerHTML = "Welcome to my Homepage";
+//document.getElementById("myH1").innerHTML = "Welcome to my Homepage";
 ```
 
 行末注释：
 ``` JavaScript
-var x=5;    // 声明 x 并把 5 赋值给它
-var y=x+2;  // 声明 y 并把 x+2 赋值给它
+var x = 5;    // 声明 x 并把 5 赋值给它
+var y = x+2;  // 声明 y 并把 x+2 赋值给它
 ```
 
 多行注释：
 ``` JavaScript
 /*
-document.getElementById("myH1").innerHTML="Welcome to my Homepage";
-document.getElementById("myP").innerHTML="This is my first paragraph.";
+document.getElementById("myH1").innerHTML = "Welcome to my Homepage";
+document.getElementById("myP").innerHTML = "This is my first paragraph.";
 */
 ```
 
@@ -131,7 +133,7 @@ document.getElementById("myP").innerHTML="This is my first paragraph.";
     ```
   - 可以在一条语句中声明很多变量
 	 ``` JavaScript
-	 var name="Gates", age=56, job="CEO";
+	 var name = "Gates", age = 56, job = "CEO";
 	 ```
   - 如果在声明变量时没有赋值，这个变量的值实际上是 `undefined`
     ``` JavaScript
@@ -140,7 +142,7 @@ document.getElementById("myP").innerHTML="This is my first paragraph.";
   - 如果重新声明 JavaScript 变量，该变量的值不会丢失
 	 ``` JavaScript
 	 // 在以下两条语句执行后，变量 carname 的值依然是 "Volvo"：
-	 var carname="Volvo";
+	 var carname = "Volvo";
 	 var carname;
 	 ```
 
