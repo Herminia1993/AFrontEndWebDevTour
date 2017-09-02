@@ -246,6 +246,7 @@
 - [attentiveness/reading](https://github.com/attentiveness/reading)
 - [有哪些 React Native 开发的作品推荐吗？](https://www.zhihu.com/question/37275973)
 - [REACT NATIVE模块桥接详解](http://www.dobest.me/blog/2015/10/16/React%20Native模块桥接详解/)
+- [从一个实战项目来看一下React Native开发的几个关键技术点](https://juejin.im/post/59a65113f265da247b4e98c1)
 
 
 ## 业界讨论
