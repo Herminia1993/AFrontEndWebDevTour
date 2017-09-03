@@ -1,4 +1,4 @@
-# Reat Native 学习[笔记](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues)
+# React Native 学习[笔记](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues)
 
 ## 相关作品
 - [AwesomeProject](./AwesomeProject)：一个 Tutorial Project，用来记录 [从 0 开始学习 React Native](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/blob/master/React-Native/README.md) 的过程的小项目。
