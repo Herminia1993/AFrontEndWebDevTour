@@ -2,7 +2,7 @@
 A journey of learning front-end development.
 
 
-## 示例项目
+## 学习成果
 - [HTMLExamples](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/tree/master/learning-notes/HTMLExamples)
 ![](./resources/HTML-Examples.jpeg)
 
