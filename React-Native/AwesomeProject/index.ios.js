@@ -18,6 +18,10 @@ import {
 
 import Util from './components-example/utils.js';
 
+// Basics
+import FlexboxExample from './basics/section_01.js';
+
+// Components
 import CtripApp from './components-example/section_01.js';
 import NetEaseApp from './components-example/section_02/section_02.js';
 import NavigatorApp from './components-example/section_03.js';
@@ -31,12 +35,14 @@ import GridLayoutListViewApp from './components-example/section_10.js';
 import ScrollViewApp from './components-example/section_11.js';
 import ActivityIndicatorApp from './components-example/section_12.js';
 
+// APIs
 import AsyncStorageApp from './api-example/section_01.js';
 import AlertIOSApp from './api-example/section_02.js';
 import ActionSheetIOSApp from './api-example/section_03.js';
 import NetworkingApp from './api-example/section_04.js';
 import TimerApp from './api-example/section_05.js';
 
+// Practices
 import Talks from './other/section_01.js';
 import NativeAPIModulesDemo from './other/section_02.js';
 import NativeUIComponentsDemo from './other/section_03.js';
@@ -81,7 +87,15 @@ class List extends Component {
 
     // 列表数据源
     var routes = [
-      [
+      [{
+        component: FlexboxExample,
+        title: '01 Flexbox',
+        rightButtonTitle: 'Next',
+        onRightButtonPress: function() {
+          alert('查看下一课')
+        }
+      },],
+    [
         {
        component: CtripApp,
        title: '01 View 组件',
@@ -274,7 +288,7 @@ class List extends Component {
     ],
     ];
 
-    var sectionTitle = ['组件', 'API', '工程实践'];
+    var sectionTitle = ['The Basics', '组件', 'API', '工程实践'];
     var dataBlob = {};
     var sectionIDs = [];
     var rowIDs = [];
@@ -313,7 +327,7 @@ class List extends Component {
   render() {
     return (
         <ListView
-          automaticallyAdjustContentInsets={true}
+          automaticallyAdjustContentInsets={false}
           style={styles.listView}
           dataSource={this.state.dataSource}
           renderSectionHeader={this._renderSectionHeader}
@@ -332,7 +346,7 @@ class List extends Component {
     );
   }
 
-  _renderRow(rowData: string, sectionID: number, rowID: number, highlightRow: (sectionID: number, rowID: number) => void) {
+  _renderRow(rowData: object, sectionID: number, rowID: number, highlightRow: (sectionID: number, rowID: number) => void) {
 
     return (
       <TouchableOpacity onPress={() => {
