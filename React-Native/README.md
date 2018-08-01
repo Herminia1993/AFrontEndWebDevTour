@@ -40,14 +40,14 @@
 
 3. 储备知识            
 
-- [JavaScript](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/blob/master/learning-notes/JavaScript-learning-notes.md) ***
+- [JavaScript](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/50) ***
   - [理解 JavaScript 中的 this ](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/12)
   - [理解 JavaScript 中的方法绑定和 bind 方法，以及箭头函数 `()=>` ](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/11)
   - [JavaScript 中的严格模式（Strict mode） ](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/7)
 - CSS ***
-- ES2015(ES6) ***
-- React
-  - JSX 语法
+- [ES2015(ES6)](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/34) ***
+- [React](https://reactjs.org/)
+  - [JSX 语法](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/48)
     - 简介
     - 运行环境
     - JSX 标签
@@ -83,7 +83,7 @@
   - width
   - height
 
-4.4 FlexBox 布局  ****    
+4.4 [FlexBox](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/49)  ****
 - flex  
 - flexDirection
 - alignItems

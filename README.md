@@ -81,6 +81,8 @@ A journey of learning front-end development.
 - [Web 前端怎样入门？](https://www.zhihu.com/question/32314049)
 - [qiu-deqing/FE-learning](https://github.com/qiu-deqing/FE-learning#入门书)
 - [前端技能汇总 Frontend Knowledge Structure](https://github.com/JacksonTian/fks)
+- [Learn these JavaScript fundamentals and become a better developer](https://medium.freecodecamp.org/learn-these-javascript-fundamentals-and-become-a-better-developer-2a031a0dc9cf)
+- [The 2018 Web Developer Roadmap](https://codeburst.io/the-2018-web-developer-roadmap-826b1b806e8d)
 
 ### 书籍
 - [关于 JavaScript 的好书有哪些？](https://www.zhihu.com/question/19562698)

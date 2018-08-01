@@ -1,6 +1,7 @@
 # JavaScript 学习笔记
 
 ## 相关资源
+- [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)（复习/回顾用）
 - [W3CSchool](http://www.w3school.com.cn/js/index.asp)
 - [JavaScript 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)
 - [Browser 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)

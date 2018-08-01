@@ -1,11 +1,11 @@
 # Front-End Web Development 学习笔记
 
 
-一、浏览器编程基础         
-1. 搭建我的开发环境        
-2. 创建我的第一个项目        
+一、浏览器编程基础
+1. 搭建开发环境
+2. 创建第一个项目
 2.1 介绍        
-- 我的浏览器是如何跟服务器打交道的
+- 浏览器是如何跟服务器打交道的
   > When you visit a website, your browser has a conversation with a server, another computer on the internet. The browser sends a request, the server responds
 
   > It is the browser’s job to send requests to the server; interpret the HTML, CSS, and JavaScript
@@ -75,10 +75,49 @@ it receives in the response from the server; and present the result to the user.
 7. 使用 CSS 来实现视觉效果        
 
 
-二、模块、对象和表单        
+二、模块、对象和表单
 
-三、实时数据        
+1. 模块、对象和方法
+
+2. Bootstrap
+
+3. 用 JavaScript 处理表单
+
+4. 从数据到 DOM
+
+5. 表单验证
+
+6. Ajax
+
+7. Deferreds and Promises
+
+三、实时数据
+
+1. Node.js
+
+2. 使用 WebSockets 实现实时通讯
+
+3. 使用 Babel 编译 ES6
+
+4. ES6
+
         
-四、应用架构        
+四、应用架构
+
+
+1. MVC 和 Ember
+
+2.  Routing, Routes  和 Models
+
+3. Models 和数据绑定
+
+4. Data – Adapters, Serializers, and Transforms
+
+5. Views 和 Templates
+
+6. Controllers
+
+7. Components
+
 
 五、终结篇        
