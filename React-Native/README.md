@@ -46,7 +46,7 @@
   - [JavaScript 中的严格模式（Strict mode） ](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/7)
 - CSS ***
 - [ES2015(ES6)](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/34) ***
-- [React](https://reactjs.org/)
+- [React](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/36)
   - [JSX 语法](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/48)
     - 简介
     - 运行环境
@@ -55,7 +55,7 @@
     - 属性
     - 样式
     - 事件绑定 ****
-  - React.JS
+  - [React.JS](https://reactjs.org/)
   - React 的模块化组件概念
      - [什么是组件](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/25)
      - [组件的生命周期](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/8)
