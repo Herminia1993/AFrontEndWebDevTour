@@ -47,9 +47,7 @@ export default class MainView extends Component {
     // 上、左、右的边线由 container 来显示，第一、二列 cell 负责显示底、右的边线，
     // 最后一列 cell 显示底、右的边线
     render() {
-
         let actualThis = this;
-        
         var cells = this.state.days.map(function(element, index) {
             return (
                 <View 
@@ -61,9 +59,11 @@ export default class MainView extends Component {
                         title={'Day' + (index+1)}
                         iconInfo={element}
                         onPress={()=>{
-                            // TODO
+                            // 这里的 this 实际上是一个 DedicatedWorkerGlobalScope 对象，而不是 MainView
+                            // 所以我们需要用 this 别名的方式来指向 MyView
                             actualThis._jumpToDay(index);
                         }}>
+                        
                     </HomeCell>
                 </View>
             );
@@ -81,6 +81,13 @@ export default class MainView extends Component {
         );
       }
 
+
+      componentDidMount() {
+        
+        setTimeout(()=>{
+            this._jumpToDay(0);
+        }, 1000);
+      }
 
       // 跳转到具体某一天
       _jumpToDay(index) {

@@ -6,23 +6,31 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-// 3-rd party
+// 3rd party
 import Icon from 'react-native-vector-icons/Ionicons';
 
 /*
 首页 cell，文字 + icon 的样式 
  */
 export default class HomeCell extends Component {
+
+
+    constructor() {
+        super();
+    }
     
     render() {
+
         return (
             <TouchableOpacity 
                 style={styles.containerView} 
                 underlayColor="#eee" 
-                onPress={this.props.onPress}>
+                onPress={this.props.onPress}
+                >
                     <Icon style={[styles.icon, {color: this.props.iconInfo.color}]} 
                         size={this.props.iconInfo.size} 
-                        name={this.props.iconInfo.icon}></Icon>
+                        name={this.props.iconInfo.icon}
+                        ></Icon>
                     <Text style={styles.title}>{this.props.title}</Text>
             </TouchableOpacity>
         );
