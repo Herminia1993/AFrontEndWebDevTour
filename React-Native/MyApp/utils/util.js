@@ -11,7 +11,12 @@ const Util = {
     height: Dimensions.get('window').height
   },
 
+  formatNumWithFixedDigit(num, length) {
+    return (Array(length).join('0') + num).slice(-length);
+  },
 }
+
+
 
 
 export default Util;
