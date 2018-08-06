@@ -1,7 +1,8 @@
 
 'use strict';
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component} from 'react';
+import PropTypes from 'prop-types';
 import {
   AppRegistry,
   StyleSheet,
@@ -30,24 +31,24 @@ export default class MapView extends Component {
       * 区域由中心点坐标和区域范围坐标来定义。
       *
       */
-      region: React.PropTypes.shape({
+      region: PropTypes.shape({
           /**
           * 地图中心点的坐标。
           */
-          latitude: React.PropTypes.number.isRequired,
-          longitude: React.PropTypes.number.isRequired,
+          latitude: PropTypes.number.isRequired,
+          longitude: PropTypes.number.isRequired,
 
           /**
           * 最小/最大经、纬度间的距离。
           */
-          latitudeDelta: React.PropTypes.number.isRequired,
-          longitudeDelta: React.PropTypes.number.isRequired,
+          latitudeDelta: PropTypes.number.isRequired,
+          longitudeDelta: PropTypes.number.isRequired,
       }),
 
       /**
       * Callback that is called continuously when the user is dragging the map.
       */
-      onRegionChange: React.PropTypes.func,
+      onRegionChange: PropTypes.func,
   };
 
   // 监听事件回调

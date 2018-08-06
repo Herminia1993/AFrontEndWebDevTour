@@ -34,6 +34,7 @@ import SimpleListViewApp from './components-example/section_09.js';
 import GridLayoutListViewApp from './components-example/section_10.js';
 import ScrollViewApp from './components-example/section_11.js';
 import ActivityIndicatorApp from './components-example/section_12.js';
+import ModalExample from './components-example/section_13.js';
 
 // APIs
 import AsyncStorageApp from './api-example/section_01.js';
@@ -193,6 +194,14 @@ class List extends Component {
           alert('查看下一课')
         }
       },
+      {
+       component: ModalExample,
+       title: '13 Modal 组件',
+       rightButtonTitle: 'Next',
+       onRightButtonPress: function() {
+         alert('查看下一课')
+       }
+     },
     ],
     [
        {
@@ -327,7 +336,7 @@ class List extends Component {
   render() {
     return (
         <ListView
-          automaticallyAdjustContentInsets={false}
+          automaticallyAdjustContentInsets={true}
           style={styles.listView}
           dataSource={this.state.dataSource}
           renderSectionHeader={this._renderSectionHeader}
