@@ -118,7 +118,7 @@
 - [JavaScript 教程 - 阮一峰](https://wangdoc.com/javascript/index.html)
 - [JavaScript教程- 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 - [Node.js](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/47)
-
+- [JS 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)（[英文原版](https://github.com/MostlyAdequate/mostly-adequate-guide)）
 
 ## 问题汇总
 - [什么是脚本语言？](https://zh.wikipedia.org/wiki/脚本语言)
