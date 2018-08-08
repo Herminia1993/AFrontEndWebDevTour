@@ -70,7 +70,7 @@
   - 对象作用域
   - [定义类或对象](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/39)
   - [修改对象](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/40)
-  - [this 关键字](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/12)
+  - [this 关键字以及 call, apply 和 bind 函数](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/12)
 2. 继承
 - [原型继承](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/41)
 - class 继承
