@@ -175,7 +175,7 @@
           
 1.6 [原生和 React Native 之间的通信](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/22)        
 
-1.7 Flux 数据流简介，Redux 框架简介
+1.7 Flux 数据流，[Redux 框架](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/59)
 
 ### 2.工程实践            
 
