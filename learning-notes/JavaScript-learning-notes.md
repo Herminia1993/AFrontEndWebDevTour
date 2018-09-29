@@ -87,7 +87,8 @@
 1. DOM（文档对象模型）
 2. 事件
 3. BOM（浏览器对象模型）
-4. Canvas
+4. [AJAX](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/60)
+5. Canvas
 
 ### 八、错误处理
 
