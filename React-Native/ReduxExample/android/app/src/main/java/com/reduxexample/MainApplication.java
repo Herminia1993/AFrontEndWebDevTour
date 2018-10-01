@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.reduxexample;
 
 import android.app.Application;
 
