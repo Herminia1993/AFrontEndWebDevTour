@@ -9,11 +9,16 @@ const counterReducer = (state = {count: 0}, action) => {
     switch (action.type) {
         case Actions.COUNTER_INCREMENT:
             return Object.assign({}, state, {
-                count: state.count + 1
+                count: Number(state.count) + 1
             });
         case Actions.COUNTER_DECREMENT:
             return Object.assign({}, state, {
-               count: state.count - 1
+               count: Number(state.count) - 1
+            });
+        case Actions.COUNTER_JUMP_TO_VALUE:
+            const value = isNaN(action.data) ? state.count : action.data;
+            return Object.assign({}, state, {
+                count: value
             });
         default:
             return state;
