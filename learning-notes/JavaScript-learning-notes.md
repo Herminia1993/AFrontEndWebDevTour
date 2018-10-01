@@ -80,7 +80,7 @@
 ### 六、异步操作
 1. 概述
 2. 定时器
-3. Promise 对象
+3. [Promise](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/65)
 
 ### 七、浏览器
 
