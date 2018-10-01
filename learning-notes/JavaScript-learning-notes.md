@@ -5,7 +5,7 @@
 1. JavaScript 简介
 - JavaScript 是什么
 - JavaScript 的历史
-- [ECMAScript 2015（ES6）](http://es6.ruanyifeng.com/)
+- [ECMAScript 2015（ES6）](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/34)
 
 2. JavaScript 的应用
 
