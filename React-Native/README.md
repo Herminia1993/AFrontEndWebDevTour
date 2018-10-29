@@ -66,7 +66,7 @@
 - 开发准备 ***
   - 配置文件
   - 运行（模拟器、真机）
-  - 调试
+  - [调试](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/68)
   - 内部发布（打 ipa 包在真机上运行）
 
 ### 4. 基础概念            
