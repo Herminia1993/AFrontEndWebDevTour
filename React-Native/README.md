@@ -63,6 +63,7 @@
         - 子组件调用父组件
         - 父组件调用子组件
      - 虚拟 DOM 的概念
+- [TypeScript](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/69)（可选）
 - 开发准备 ***
   - 配置文件
   - 运行（模拟器、真机）
