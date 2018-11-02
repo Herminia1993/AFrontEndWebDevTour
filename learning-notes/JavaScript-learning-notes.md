@@ -6,6 +6,7 @@
 - JavaScript 是什么
 - JavaScript 的历史
 - [ECMAScript 2015（ES6）](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/34)
+- JavaScript 的超集：[TypeScript](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/69)
 
 2. JavaScript 的应用
 
