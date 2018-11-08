@@ -78,7 +78,7 @@
 4.2 [状态（state）](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/24)
 > 状态是可以在组件内部修改的
 
-4.3 样式（style）
+4.3 [样式（style）](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/71)
  
 - FlexBox 布局
 - 高度与宽度   
