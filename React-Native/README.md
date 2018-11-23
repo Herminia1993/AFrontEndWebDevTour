@@ -239,7 +239,7 @@
 ## 业界讨论
 
 ### 实践优化
-- [携程：React Native 业务实践和性能优化](http://www.infoq.com/cn/presentations/react-native-business-practice-and-performance-optimization?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
+- [携程：React Native 业务实践和性能优化](https://zhuanlan.zhihu.com/p/23715716)
 - [React Native 在 Glow 的实践](http://tech.glowing.com/cn/react-native-at-glow/)
 - [看Facebook是如何优化React Native性能](https://github.com/gaohailang/blog/issues/4)
 
@@ -264,7 +264,8 @@
 - [React Native有什么优势？能跟原生比么？](https://www.zhihu.com/question/36722811)
 - [React Native是否会是下一个技术浪潮？](https://www.zhihu.com/question/43693705)
 - [如何看待苹果禁止 JSPatch 等 iOS APP 热更新方案？](https://www.zhihu.com/question/56794578)
-
+- [React Native重构路线图发布！](https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651010262&idx=2&sn=4c3ac4e023b5bc542affc3b3f2c9a8fe&chksm=bdbecc858ac94593381433f8aea7a2c50747178af00f417976561f87404054a3a1c08bc6d8ed&scene=27#wechat_redirect)
+- [导读《React Native at Airbnb》—— 为什么 Airbnb 放弃了 React Native?](https://zhuanlan.zhihu.com/p/38288285)
 
 
 
