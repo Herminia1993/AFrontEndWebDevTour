@@ -28,6 +28,7 @@ A journey of learning front-end development.
 - 数据库（MySQL）
 - Ajax
 - ES5, ES6
+- [Redux](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/59)
 
 ### 3.实战
 - 工程化
