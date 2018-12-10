@@ -43,6 +43,9 @@ A journey of learning front-end development.
   - jQuery
   - Bootstrap
   - 三大框架
+    - React
+    - [Vue](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/tree/master/vuejs)
+    - Angular
 - 移动端 web 开发
   - HTML5
   - CSS3
