@@ -29,13 +29,14 @@ export default class App extends Component<Props> {
     super(prop);
 
     this.state = {
-      text: 'Welcome to React Native!'
+      text: ''
     }
+
   }
 
   onPress() {
     this.setState({
-      text: 'To get started, edit App.js'
+      text: 'Welcome to React Native!'
     });
   }
 
@@ -43,9 +44,9 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <TouchableHighlight onPress={this.onPress.bind(this)}>
-        <Text>Click me!</Text>
+          <Text>Click me!</Text>
         </TouchableHighlight>
-        <MyView title={this.state.text}></MyView>
+        {this.state.text ? <MyView title={this.state.text}></MyView> : null}
       </View>
     );
   }
