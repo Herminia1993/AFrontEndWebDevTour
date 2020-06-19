@@ -1,6 +1,8 @@
 # AFrontEndWebDevTour
 A journey of learning front-end development.
 
+![](https://github.com/kamranahmedse/developer-roadmap/raw/master/img/frontend.png?year-2020-2)
+
 ## 学习路线
 
 ### 入门
@@ -28,11 +30,14 @@ A journey of learning front-end development.
 - 数据库（MySQL）
 - Ajax
 - ES5, ES6
+- Flux
 - [Redux](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/59)
 
 ### 3.实战
 - 工程化
   - 依赖管理
+    - npm
+    - yarn
   - 前端模块化
   - 前端构建工具
   - 编译工具
@@ -46,18 +51,25 @@ A journey of learning front-end development.
     - React
     - [Vue](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/tree/master/vuejs)
     - Angular
+  - 其他
+    - Mobx
+    - saga
 - 移动端 web 开发
   - HTML5
   - CSS3
   - canvas
 - 版本控制
 
-### 4.延伸
+### 4.其他
+- TypeScript
+- W3C、TC39 表针
+- 浏览器内核、脚本引擎
 - SEO
 - NodeJS 开发
 - 微信公众号开发
 - React Native
 - 小程序
+- PWA
 
 ### 5.厚积薄发
 - 数据结构
@@ -71,14 +83,29 @@ A journey of learning front-end development.
 ## 相关资源
 
 ### 指南
-- [front-end-handbook-2017](https://github.com/xitu/front-end-handbook-2017)
+- [front-end-handbook-2019](https://github.com/FrontendMasters/front-end-handbook-2019)
 - [MDN](https://developer.mozilla.org/zh-CN/)
 - [w3school](http://www.w3school.com.cn)
 
 ### 教程
-- [Front-End Web Development(The Big Nerd Ranch Guide)](https://www.amazon.com/Front-End-Web-Development-Ranch-Guides/dp/0134433947)
-- [阮一峰：ECMAScript 6 入门教程](http://es6.ruanyifeng.com/)
-- [廖雪峰的 JavaScript 教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+- 前端开发
+  - [Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn)
+  - 《[Front-End Web Development(The Big Nerd Ranch Guide)](https://www.amazon.com/Front-End-Web-Development-Ranch-Guides/dp/0134433947)》
+- JavaScript
+  - [廖雪峰的 JavaScript 教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+  - [阮一峰：ECMAScript 6 入门教程](http://es6.ruanyifeng.com/)
+  - 《JavaScript语言精粹》
+  - 《JavaScript 高级程序设计》
+  - 《深入理解ES6》
+- DOM
+  - 《JavaScript DOM编程艺术 （第2版）》
+  - 《高性能 JavaScript》
+- CSS
+  - [CSS | MDN ](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  - 《精通CSS（第2版）》
+  - 《CSS设计指南》
+  - 《CSS权威指南》
+  - 《CSS3实用指南》
 
 ### 学习路线
 - [零基础的前端开发初学者应如何系统地学习？](https://www.zhihu.com/question/19834302)
