@@ -34,6 +34,7 @@ A journey of learning front-end development.
 - [Redux](https://github.com/ShannonChenCHN/AFrontEndWebDevTour/issues/59)
 
 ### 3.实战
+- Coding style
 - 工程化
   - 依赖管理
     - npm
@@ -43,7 +44,8 @@ A journey of learning front-end development.
   - 编译工具
   - 单元测试
   - 自动化测试
-  - Coding style
+  - 持续集成
+  - nginx
 - 框架/库
   - jQuery
   - Bootstrap
@@ -59,6 +61,8 @@ A journey of learning front-end development.
   - CSS3
   - canvas
 - 版本控制
+- 性能优化
+- 浏览器兼容问题
 
 ### 4.其他
 - TypeScript
@@ -71,13 +75,14 @@ A journey of learning front-end development.
 - 小程序
 - PWA
 
+
 ### 5.厚积薄发
 - 数据结构
 - 算法
 - 操作系统和计算机网络
 - C 语言
 - 一门静态编程语言，比如 Java
-
+- 脚本语言，比如 Python
 
 
 ## 相关资源
@@ -118,7 +123,6 @@ A journey of learning front-end development.
 ### 书籍
 - [关于 JavaScript 的好书有哪些？](https://www.zhihu.com/question/19562698)
 - [如果有人让你推荐前端技术书，请让他看这个列表：jobbole/awesome-web-dev-books](https://github.com/jobbole/awesome-web-dev-books)
-
 
 ## 知识点
 - [什么是 HTML5？](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML)
